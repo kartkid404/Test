@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Test1.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Test1" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="6D0F50FE-996D-4DA1-933A-BBBB552B6151" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Life_" tags="" position="75,400" size="100,100">Life is a beautiful thing.
+<tw-storydata name="Test1" startnode="52" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="6D0F50FE-996D-4DA1-933A-BBBB552B6151" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Life_" tags="" position="75,475" size="100,100">Life is a beautiful thing.
 
 It can be molded as the most hauntingly terrifying experience, or the most beautiful, and memorable journey.  Where every choice you make, and every belief you acquire, shapes your story.
 
@@ -1356,7 +1356,35 @@ Sunday McKennedy: $Rel_Sunday
 $name was born in the $setting, in a quaint suburb at the capital of (if: $setting is &quot;1960s&quot;)[the United States of America, Washington D.C](else-if: $setting is &quot;2000s&quot;)[Australia, Melbourne](else:)[Australia, Sydney].&lt;br&gt;&lt;br&gt;
 
 (if: $SaidFirstWord is true)[
-You said your first word half a year later since you were born. Your first word was...$FirstWord.&lt;br&gt;&lt;br&gt;
+    You said your first word 
+    
+    (if: $TimeResult is &quot;&quot;)[
+        (if: (history:) contains &quot;LearnToWalk01&quot; and ((history:) contains &quot;BlunderMoment01&quot; or (history:) contains &quot;Achievement02&quot;) and (history:) does not contain &quot;LearnToWalk02&quot;)[
+            (set: $TimeResult to &quot;half a year&quot;)
+        ]
+        (else-if: (history:) contains &quot;LearnToWalk02&quot; and ((history:) contains &quot;BlunderMoment02&quot; or (history:) contains &quot;Achievement03&quot;) and (history:) does not contain &quot;LearnToWalk03&quot;)[
+            (set: $TimeResult to &quot;seven months&quot;)
+        ]
+        (else-if: (history:) contains &quot;LearnToWalk03&quot; and ((history:) contains &quot;BlunderMoment03&quot; or (history:) contains &quot;Achievement04&quot;) and (history:) does not contain &quot;LearnToWalk04&quot;)[
+            (set: $TimeResult to &quot;eight months&quot;)
+        ]
+        (else-if: (history:) contains &quot;LearnToWalk04&quot; and ((history:) contains &quot;BlunderMoment04&quot; or (history:) contains &quot;Achievement05&quot;) and (history:) does not contain &quot;LearnToWalk05&quot;)[
+            (set: $TimeResult to &quot;ten months&quot;)
+        ]
+        (else-if: (history:) contains &quot;LearnToWalk05&quot; and ((history:) contains &quot;BlunderMoment05&quot; or (history:) contains &quot;Achievement06&quot;) and (history:) does not contain &quot;LearnToWalk06&quot;)[
+            (set: $TimeResult to &quot;a year&quot;)
+        ]
+        (else-if: (history:) contains &quot;LearnToWalk06&quot; and (history:) contains &quot;Achievement07&quot;)[
+            (set: $TimeResult to &quot;sixteen months&quot;)
+        ]
+    ]
+    
+    $TimeResult after your birth. Your first word was... &quot;$FirstWord.&quot;&lt;br&gt;
+]
+(else:)[
+]
+(if: (history:) contains &quot;BlunderMoment02&quot; or (history:) contains &quot;Achievement03&quot;)[
+You rescued your Cute Plushie!&lt;br&gt;&lt;br&gt;
 ]
 (else:)[
 ]
@@ -1374,6 +1402,28 @@ To Be Continued.
 }</tw-passagedata><tw-passagedata pid="31" name="UpdateLOG" tags="" position="1400,175" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
 
 ### UPDATE LOG:
+&#39;&#39;(05/15/2026: Greed&#39;s Interactive Novel - Consistency Arc 2.2)&#39;&#39;
+---Test 16---
+(color: &quot;grey&quot;)[
+- Completed all outcomes in Choice A in LearnToWalk02
+- Updated previous two outcomes from former update in Choice A
+- Updated Background Menu
+- Modified and Improved Pronoun System (Yet To Appear in All Passages - Will decrease file size)
+- Minor Modification to to Language Series
+- Fixed Random Bugs in Learn To Walk Series
+- Fixed accidental plushie duplication
+- Added Terms and Conditions
+
+Author&#39;s Note: I have bad and good news. Bad news first... Today, I accidentally deleted the text I was writing for the third outcome in the second stage of the Learn To Walk series... I woe for my lost paragraphs... QAQ
+
+The good news is that it&#39;s the only thing I accidentally deleted and I was able to recover with a better rewrite. Always save your work, guys! Anyway, that is all I have to say. I plan on fixing the pronoun system maybe tomorrow or in a few days. Not sure. Maybe soon, after all, it isn&#39;t that hard. It&#39;ll make reading code a ton easier than before, and there will be less pronoun issues (hopefully).
+
+Upcoming updates will mostly be bug fixes, performance improvement, and adding content. I have a few dozen future scenes stocked thanks to random bursts of inspiration, all saved in my handy google drive, samsung notes, and various writing apps in my phone. But they will all only be released in the far future once I&#39;m done with the babyhood arc.
+
+If all things go well, babyhood arc should be the shortest arc among the six stages of life. Please go easy on me, I&#39;m the sole developer and author of this novel, so it&#39;s a little difficult for me to pump out content. Everything I write is crafted with the human mind, and my mind tends to be distracted with all sorts of things.
+
+At the moment, this is solely a passion project, and I do not intend on monetizing it.
+]
 
 &#39;&#39;(05/11/2026: Greed&#39;s Interactive Novel - Consistency Arc 2.1)&#39;&#39;
 ---Test 15---
@@ -1475,7 +1525,7 @@ b) Sexuality
 - Created the Babyhood Arc
 - Reset Option Update]
 </tw-passagedata><tw-passagedata pid="32" name="LearnToWalk02" tags="" position="1575,400" size="100,100">{
-(if: $inventory contains $item)[(set: $inventory to it - (a: $item))]
+(if: $inventory contains &quot;Cute Plushie&quot;)[(set: $inventory to it - (a: &quot;Cute Plushie&quot;))]
 (else:)[(set: $foundIT to true)]
 
 (set: $babyEvents to it - (a: (passage:)&#39;s name))
@@ -1886,10 +1936,35 @@ To Be Continued
 		(set: $returnTo to (passage:)&#39;s name)
 		(goto: &quot;Inventory&quot;)
 	]
+    
+    		(set: $cName to $name)
+		(if: $name is &quot;Cory&quot; and $isMale is true)[
+			(set: $cName to $name + &quot; Junior&quot;)
+			(set: $cPossessive to &quot;Junior&#39;s&quot;)
+		]
+		(else-if: $name is &quot;Cory&quot; or $name is &quot;Casey&quot;)[
+			(set: $cName to $name + &quot; O&#39;&quot;)
+			(set: $cPossessive to $cName + &quot;&#39;s&quot;)
+		]
+		(else-if: $name is &quot;Tobias&quot;)[
+			(set: $cPossessive to $name + &quot;&#39;&quot;)
+		]
+		(else:)[
+			(set: $cPossessive to $name + &quot;&#39;s&quot;)
+		]
+
+	(if: $isMale is true)[
+		(set: $cHe to &quot;He&quot;, $che to &quot;he&quot;, $cHis to &quot;His&quot;, $chis to &quot;his&quot;, $cHim to &quot;Him&quot;, $chim to &quot;him&quot;)
+	]
+	(else:)[
+		(set: $cHe to &quot;She&quot;, $che to &quot;she&quot;, $cHis to &quot;Her&quot;, $chis to &quot;her&quot;, $cHim to &quot;Her&quot;, $chim to &quot;her&quot;)
+	]
+    
 }
 ---
 {
-(if: (history:) does not contain (passage:)&#39;s name)[
+
+&lt;!--(if: (history:) does not contain (passage:)&#39;s name)[
 (if: $choice is &quot;A&quot;)[
 (set: $choice to &quot;&quot;)
 
@@ -1916,6 +1991,27 @@ To Be Continued
 &lt;!--THE MODERN TIMES--&gt;
 
 (if: $setting is &quot;2000s&quot;)[
+
+	&lt;!-- AUTOMATIC NAME AND PRONOUN CALCULATION --&gt;
+(set: _name to $name)
+(if: $name is &quot;Cory&quot; and $isMale is true)[
+	(set: _name to $name + &quot; Junior&quot;)
+	(set: _possessive to &quot;Junior&#39;s&quot;)
+]
+(else-if: $name is &quot;Cory&quot; or $name is &quot;Casey&quot;)[
+	(set: _name to $name + &quot; O&#39;&quot;)
+	(set: _possessive to _name + &quot;&#39;s&quot;)
+]
+(else-if: $name is &quot;Tobias&quot;)[
+	(set: _possessive to _name + &quot;&#39;&quot;)
+]
+(else:)[
+	(set: _possessive to _name + &quot;&#39;s&quot;)
+]
+
+(set: _he to (if: $isMale is true)[&quot;He&quot;](else:)[&quot;She&quot;])
+(set: _his to (if: $isMale is true)[&quot;his&quot;](else:)[&quot;her&quot;])
+
 	No matter how hard you try to lift you body, nothing seemed to work. Then the rhythmic snoring of your babysitter, Sunday, helped your little brain concentrate. You noticed something wonderful!&lt;br&gt;&lt;br&gt;
     
     You may not be able to lift your little body over, but as you moved about in the crib, you can feel it sway and push your body. Push to the left, push, push, push, and---oh dear! You slammed your little face onto the soft linen of your crib! It&#39;s a little hard to breath, and a very scary position for your small age but it&#39;s okay, your crib is still swaying, and your tiny body is still very strong!&lt;br&gt;&lt;br&gt;
@@ -1947,11 +2043,120 @@ To Be Continued
     
     Push and---&quot;Hahh!&quot; You sigh in relief before turning your body to the other end of your crib. You turn your head and grab one of the little bars.&lt;br&gt;&lt;br&gt;
     //==Skill Check!==//&lt;br&gt;
-    (if: $Str is &gt; 10)[//==Skill Check (color: &quot;green&quot;)[SUCCESS]!==//&lt;br&gt;&lt;br&gt;Thanks to all that strength you&#39;ve been building up, you successfully pull yourself up with ease.&lt;br&gt;&lt;br&gt;](else:)[//==Skill Check (color: &quot;red&quot;)[FAILED]!==//&lt;br&gt;&lt;br&gt;A little more huffs and puffs then you successfully grab hold of the bar and pulled yourself up with much difficulty.&lt;br&gt;&lt;br&gt;...TO BE CONTINUED.]
+    (if: $Str is &gt; 10)[//==Skill Check (color: &quot;green&quot;)[SUCCESS]!==//&lt;br&gt;&lt;br&gt;Thanks to all that strength you&#39;ve been building up, you successfully pull yourself up with ease.&lt;br&gt;&lt;br&gt;](else:)[//==Skill Check (color: &quot;red&quot;)[FAILED]!==//&lt;br&gt;&lt;br&gt;A little more huffs and puffs then you successfully grab hold of the bar and pulled yourself up with much difficulty.&lt;br&gt;&lt;br&gt;
+    You pulled yourself up until you reach the higher end of the bar. The smooth and soft surface of the crib fence was the perfect hold for your soft and doughy little palms. Clinging tightly onto the bar, you reach for your plushie. It hung right above the neck of the crib mobile. Your little hands attempt to reach the lowest paper toys, and by miracle, you grab it! Your powerful grip shook the crib mobile, and before you knew it, your little plushie jumped off! It landed right on your shoulders, and your little body swayed uncontrollably before landing bum first back on the mattress. What a successful rescue!
+    
+    The beady eyes of your little plushie shot you a look of gratitude. How did you know? Well the sparkle in its eyes say everything! You better go and comfort the little one for surviving such a scary ordeal. &quot;Yaha!&quot; You squeal in delight.
+    
+    &quot;How are things on your end?&quot; Cory asked his brother, Stephen. &quot;Not bad... the firewall system of this whole company is impressive, but not as impressive as me. I may be rusty but that doesn&#39;t mean the years I spent working in the force was a waste.&quot; A brass voice spoke into Cory&#39;s mind directly. He smiled at the response before navigating through the network of data he just gained access to.&lt;br&gt;&lt;br&gt;&quot;They only want to know what STASIS has been cooking up. COLOR is a pretty competitive company, I&#39;m the only one they turn to when it comes to stuff like this.(if: (history:) contains &quot;Language01&quot;)[ Especially after I solved the malicious virus running through their program in their bestselling virtual reality game.]&quot;&lt;br&gt;
+    &quot;Wow, impressive. Look at my little brother, becoming a big deal and all that. I&#39;m proud of you, you know.&quot; Stephen whistled. &quot;Hmm... they detected us. Have you found what you wanted? We better boot out and erase any traces leading to us.&quot;&lt;br&gt;
+    &quot;Mhm. I&#39;ve got what we needed. Let&#39;s head out. Thanks for covering for me, Stephen.&quot;&lt;br&gt;
+    &quot;Always. I&#39;m just glad you don&#39;t forget to ask for help when you need it. Unlike a certain someone...&quot;&lt;br&gt;&lt;br&gt;
+    Cory finished retrieving all the files before erasing his traces and leaving the virtual space. He directly attacked and stunned the unknown networks trying to get a lead on him. &quot;Fabian is stubborn, I know. But you shouldn&#39;t hold it against him, big brother. He&#39;ll be more hardheaded that way.&quot; He coaxed Stephen before smoothly moving onto another topic.&lt;br&gt;&lt;br&gt;
+    &quot;By the way, me and Casey plan on hosting a baby party some time when we&#39;re both ready. I was wondering if you&#39;d like to come over and help us out sometime.&quot; Stephen drifted from his bitter thoughts, &quot;Seriously? You don&#39;t need to ask me twice, Cory! I&#39;d love to help out. Just text me the deets!&quot;&lt;br&gt;&lt;br&gt;
+    &quot;The //deets?// that is so old-fashioned. Nobody uses that anymore. Probably only our parents.&quot;&lt;br&gt;
+    &quot;What can I say? I find the 2000s pretty neat. If only I were born earlier,&quot; Stephen sighed with longing.&lt;br&gt;
+    &quot;At least you were born in the 2000s. That counts, right?&quot;&lt;br&gt;&lt;br&gt;
+    The two brothers playfully bantered before ending the virtual call with a farewell.
+    ]
 	]
 &lt;br&gt;
 ---
-(color: &quot;yellow&quot;)[&lt;br&gt;Congratulations! With a strong body, and clever mind, you were able to successfully retrieve your cute plushie back securely! Without disturbing your (if: $setting is &quot;2040s&quot;)[father&#39;s conversation with the door!](else:)[babysitter&#39;s sleep---at least at first.]&lt;br&gt;&lt;br&gt;Truly a model exemplery of a good child! You are definitely gonna talk all about the process of your rescue plans with the little plushie later and watch their beady eyes widen from your sheer awesomeness.]
+(color: &quot;yellow&quot;)[&lt;br&gt;Congratulations! With a strong body, and clever mind, you were able to successfully retrieve your cute plushie back securely! Without disturbing your (if: $setting is &quot;2040s&quot;)[father&#39;s conversation with the door!](else:)[babysitter&#39;s sleep---at least at first.]&lt;br&gt;&lt;br&gt;Truly a model exemplery of a good child! You are definitely going to regale your cute plushie with the details of your rescue plans later, and watch their beady eyes widen at your sheer awesomeness.]
+]
+] --&gt;
+
+(if: $choice is &quot;A&quot; or $pageResolved is true)[
+	(set: $choice to &quot;&quot;)
+	(set: $pageResolved to true)
+
+	&lt;!-- SHARED TEXT --&gt;
+	No matter how hard you try to lift you body, nothing seemed to work. (if: $setting is not &quot;2040s&quot;)[Then the rhythmic snoring of your babysitter, (if: $setting is &quot;1960s&quot;)[Stephen](else:)[Sunday]](else:)[Then the deep, and calming voice of your father, Cory], helped your little brain concentrate. You noticed something wonderful!&lt;br&gt;&lt;br&gt;
+    
+	You may not be able to lift your little body over, but as you moved about in the crib, you can feel it sway and push your body. Push to the left, push, push, push, and---oh dear! You slammed your little face onto the soft linen of your crib! It&#39;s a little hard to breath, and a very scary position for your small age but it&#39;s okay, your crib is still swaying, and your tiny body is still very strong!&lt;br&gt;&lt;br&gt;
+    
+	Push and---&quot;Hahh!&quot; You sigh in relief before turning your body to the other end of your crib. You turn your head and grab one of the little bars.&lt;br&gt;&lt;br&gt;
+	//==Skill Check!==//&lt;br&gt;
+	(if: $Str is &gt; 10)[//==Skill Check (color: &quot;green&quot;)[SUCCESS]!==//&lt;br&gt;&lt;br&gt;Thanks to all that strength you&#39;ve been building up, you successfully pull yourself up with ease.&lt;br&gt;&lt;br&gt;](else:)[//==Skill Check (color: &quot;red&quot;)[FAILURE]!==//&lt;br&gt;&lt;br&gt;A little more huffs and puffs then you successfully grab hold of the bar and pulled yourself up with much difficulty.&lt;br&gt;&lt;br&gt;
+
+&lt;!--TIMELINE BRANCHES--&gt;
+
+	&lt;!--THE 1960s--&gt;
+
+	(if: $setting is &quot;1960s&quot;)[
+    
+		You grip it firmly, pulling yourself up as you reach the higher end of the bar. The solid wood smelled weird and felt rough on your soft, doughy palms but neither the smell nor pain phased you. The cute plushie your dad brought you is in much more fatal danger!&lt;br&gt;&lt;br&gt;
+        
+		The plushie seemed to sense the danger it was in too. The mobile swayed, as if it was trying to push its soft cotton body off, then the teddy&#39;s arm reached for yours. You held onto the bar of the crib fence, and reached for it with difficulty. It was too high!&lt;br&gt;&lt;br&gt;
+        
+		The open window of the nursing room suddenly let in a gush of wind at just the right angle, and hit your mobile. The little hanging toys on the mobile rattled, and then your toy bravely jumped into your arms! It&#39;s cute beady eyes looked up at you with gratitude, and your whole body shook from the giddy joy you felt!&lt;br&gt;&lt;br&gt;
+        
+		&quot;Weee! Ehehe! Ah!&quot;&lt;br&gt;&lt;br&gt;
+        
+		You stumble onto the soft bedding yet again, embracing the only true love of your life: Little Pooh.&lt;br&gt;&lt;br&gt;
+        
+		Stephen got up with a start, &quot;Eh? Huh? Who&#39;s there...&quot; He turned his head left and right in a sleepy daze before his eyes landed on little $cName. &quot;Oh, it&#39;s just the baby.&quot; He groaned, and got up from the couch. &quot;Alright, what do you want? What are you being so noisy for?&quot; He grumbled, catching little $cPossessive delighted smile. It was simply adorable!&lt;br&gt;&lt;br&gt;
+        
+		He mimicked the smile without even realising it.&lt;br&gt;&lt;br&gt;
+        
+		&quot;Bah! Aiyah!&quot; The babe squealed, raising the teddy with pride. Stephen chuckled, and took the presented teddy, he assumed the babe was in some kind of playful mood. &quot;You wanna play? Alright then. Lookie here,&quot; He raised the teddy, manipulating it to maneuver across the &#39;sky,&#39;  &quot;Little bear&#39;s flying... wee! He&#39;s like a little superbear. Don&#39;t you think?&quot; $cName giggled at the presentation. $cHe didn&#39;t understand what he was trying to say, but $cName liked the tone of the older man&#39;s voice a lot, and also the performance. &quot;Yaaaa!&quot; $cHe gave $chis word.
+        
+        The two of you played by the crib for a long while until exhaustion crept up, and lulled your body into the embrace of sweet dreams and slumber. You let out a high pitched yawn, and ignore your uncle&#39;s little pokes on your shoulder.&lt;br&gt;&lt;br&gt;
+        
+        &quot;Hm? Tired already, little one? We should change your little nappy&#39;s first and get you some milk.&quot; As if $che understood, $cName protested with a pitched whine. &quot;Don&#39;t worry, it won&#39;t take too long. It&#39;ll be over in a jiffy.&quot; $cName was then placed on a changing table where $chis diaper was changed and $chis little bum was powdered. Stephen stuffed a bottle of milk into $cPossessive hold before turning to the crib mobile to turn it on and make it play a nice lullaby for $chim.
+        
+        You doze off into sweet dreams as you suckle on the milk bottle while cradled in your uncles arms. Even when you were asleep, your grip on the bottle was firm. Stephen had to gently pry it off your little palm before tucking you into bed. And then... the lights were off.&lt;br&gt;&lt;br&gt;
+        
+        Goodnight little one, sweet dreams. You&#39;ve had a long and heroic day today.
+	]
+    
+    &lt;!--THE 2000s--&gt;
+    
+	(else-if: $setting is &quot;2000s&quot;)[
+
+    	You grip it firmly, pulling yourself up as you reach the higher end of the bar. The smooth wood felt a little too slippery in your soft, and doughy palms. But thanks to your powerful infantile grip that often troubled your parents, you were able to hold on. The little mobile swayed as you struggle to stand, but it gave you another brilliant idea. You push the crib a few more times and then... your lovely plush bear bravely jumped off the mobile, slamming right down on your face. &quot;Ah!&quot; You yelped, and slap it down, whimpering from the pain.&lt;br&gt;&lt;br&gt;
+    
+    	Wait, no! Why are you even crying? You just saved little Pooh bear&#39;s life! You forgot all the pain as you excitedly fall back down to the crib, and embrace little Pooh. &quot;Hahaha...eek!&quot; You squeal, giving little Pooh several smooches just like how your mommy, and daddy did when they&#39;re happy with each other. Little Pooh bear is absolutely blushing out of bashfulness, turning its little head away from the overwhelming affection. How sweet! &quot;Ahh!&quot;&lt;br&gt;&lt;br&gt;
+    
+    	Sunday gasped, waking up in a panic. He heard another little yelp, and immediately turned to $cPossessive direction. He rested a palm against his rapidly beating chest. He thought something terrible happened to the baby. But the baby was just happily playing with $chis teddy&lt;br&gt;&lt;br&gt;
+    
+    	He got up from his nap on the couch to lift the delighted infant. &quot;Man, don&#39;t scare me like that again. You seem pretty happy though,&quot; He cradled $cName into his arms, attempting to calm his beating heart.&lt;br&gt;&lt;br&gt;
+    
+    	&quot;Lah!&quot; $cName responded in turn, happily swaying the little Pooh in $chis grip. $cHe decided to put it down for a short while to give a comforting hug. The young man seemed to be oddly stressed, $cname had noticed not long after being held.&lt;br&gt;&lt;br&gt;
+    
+    	Similar to how $che noticed every time $chis parents were in a bad mood---even when they tried to hide it. $cHe never really knew how to help them, but a little hug always works. And it never hurts to try!&lt;br&gt;&lt;br&gt;
+    
+    	Sunday felt surprised at the $cPossessive sudden affection. He paused for awhile, before reciprocating it with a gentle embrace. &quot;Little empath,&quot; He murmured, a small smile tugging on his fair face.
+	]
+    
+    &lt;!--THE 2040s--&gt;
+
+	(else-if: $setting is &quot;2040s&quot;)[
+
+		You pulled yourself up until you reach the higher end of the bar. The smooth and soft surface of the crib fence was the perfect hold for your soft and doughy little palms. Clinging tightly onto the bar, you reach for your plushie. It hung right above the neck of the crib mobile. Your little hands attempt to reach the lowest paper toys, and by miracle, you grab it! Your powerful grip shook the crib mobile, and before you knew it, your little plushie jumped off! It landed right on your shoulders, and your little body swayed uncontrollably before landing bum first back on the mattress. What a successful rescue!&lt;br&gt;&lt;br&gt;
+    
+    	The beady eyes of your little plushie shot you a look of gratitude. How did you know? Well the sparkle in its eyes say everything! You better go and comfort the little one for surviving such a scary ordeal. &quot;Yaha!&quot; You squeal in delight.&lt;br&gt;&lt;br&gt;
+    
+    	&quot;How are things on your end?&quot; Cory asked his brother, Stephen. &quot;Not bad... the firewall system of this whole company is impressive, but not as impressive as me. I may be rusty but that doesn&#39;t mean the years I spent working in the force was a waste.&quot; A brass voice spoke into Cory&#39;s mind directly. He smiled at the response before navigating through the network of data he just gained access to.&lt;br&gt;&lt;br&gt;
+        
+        &quot;They only want to know what STASIS has been cooking up. COLOR is a pretty competitive company, I&#39;m the only one they turn to when it comes to stuff like this.(if: (history:) contains &quot;Language01&quot;)[ Especially after I solved the malicious virus running through their program in their bestselling virtual reality game.]&quot;&lt;br&gt;
+    	&quot;Wow, impressive. Look at my little brother, turning into a big deal and all that. I&#39;m proud of you, you know.&quot; Stephen whistled playfully. &quot;Oh shit, they detected us. Have you found what you wanted? We better boot out and erase any traces leading to us.&quot;&lt;br&gt;
+    	&quot;Mhm. I&#39;ve got what we needed. Let&#39;s head out. Thanks for covering for me, Stephen.&quot;&lt;br&gt;
+    	&quot;Always. I&#39;m just glad you don&#39;t forget to ask for help when you need it. Unlike a certain someone...&quot;&lt;br&gt;&lt;br&gt;
+        
+    	Cory finished retrieving all the files before erasing his traces and leaving the virtual space. He directly attacked and stunned the unknown networks trying to get a lead on him. &quot;Fabian is stubborn, I know. But you shouldn&#39;t hold it against him, big brother. He&#39;ll be more hardheaded that way.&quot; He coaxed Stephen before smoothly moving onto another topic.&lt;br&gt;&lt;br&gt;
+        
+    	&quot;By the way, me and Casey plan on hosting a baby party some time when we&#39;re both ready. I was wondering if you&#39;d like to come over and help us out sometime.&quot; Stephen drifted from his bitter thoughts, &quot;Seriously? You don&#39;t need to ask me twice, Cory! I&#39;d love to help out. Just text me the deets!&quot;&lt;br&gt;&lt;br&gt;
+        
+    	&quot;The //deets?// that is so old-fashioned. Nobody uses that anymore. Probably only our parents.&quot;&lt;br&gt;
+    	&quot;What can I say? I find the 2000s pretty neat. If only I were born earlier,&quot; Stephen sighed with longing.&lt;br&gt;
+    	&quot;At least you were born in the 2000s. That counts, right?&quot;&lt;br&gt;&lt;br&gt;
+        
+    	The two brothers playfully bantered before ending the virtual call with a farewell.
+	]
+&lt;br&gt;
+---
+(color: &quot;yellow&quot;)[&lt;br&gt;Congratulations! With a strong body, and clever mind, you were able to successfully retrieve your cute plushie back securely! And you did it without disturbing your (if: $setting is &quot;2040s&quot;)[father&#39;s conversation with the door.](else:)[babysitter&#39;s sleep---at least at first.]&lt;br&gt;&lt;br&gt;Truly a model exemplery of a good child! You are definitely going to regale your cute plushie with the details of your rescue plans later, and watch their beady eyes widen at your sheer awesomeness.]
 ]
 ]
 
@@ -2108,7 +2313,7 @@ To Be Continued
 &quot;Ooh...&quot;&lt;br&gt;
 &quot;Do you think daddy will get laid off too?&quot;&lt;br&gt;
 &quot;Huh...ah...umm...&quot; (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] scrunched up (if: $isMale is true)[his](else:)[her] little nose. &lt;br&gt;
-&quot;Me neither... I don&#39;t wanna be a disappointment to your mother, I&#39;m trying. But it&#39;s getting a lot harder nowadays thanks to that (if: $setting is &quot;1960s&quot;)[(color: &quot;cyan&quot;)[stupid cold war going on].&quot;&lt;br&gt;](else-if: $setting is &quot;2000s&quot;)[(color: &quot;cyan&quot;)[horrible terrorist attack last september]. Nobody&#39;s travelling on air anymore.&quot;&lt;br&gt;](else:)[(color: &quot;cyan&quot;)[terrible virus running in our virtual reality game that&#39;s been sending our players into a coma].&quot;&lt;br&gt;]
+&quot;Me neither... I don&#39;t wanna be a disappointment to your mother, I&#39;m trying. But it&#39;s getting a lot harder nowadays thanks to that (if: $setting is &quot;1960s&quot;)[(color: &quot;cyan&quot;)[stupid cold war going on].&quot;&lt;br&gt;](else-if: $setting is &quot;2000s&quot;)[(color: &quot;cyan&quot;)[horrible terrorist attack last september]. Nobody&#39;s travelling on air anymore.&quot;&lt;br&gt;](else:)[(color: &quot;cyan&quot;)[terrible virus running in this virtual reality game that&#39;s been sending my company&#39;s players into a coma].&quot;&lt;br&gt;]
 &quot;Ah..ah...&#39;&#39;Ah-chk!&#39;&#39;&quot;&lt;br&gt;&lt;br&gt;
 
 (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] rubbed (if: $isMale is true)[his](else:)[her] nose after sneezing, then (if: $isMale is true)[his](else:)[her] big eyes widened in utter shock after (if: $isMale is true)[he](else:)[she] saw the clear mucus covering (if: $isMale is true)[his](else:)[her] little palm.&lt;br&gt;&lt;br&gt;
@@ -2148,7 +2353,7 @@ The couple quietly sat by the baby&#39;s crib fence, but then Casey went to lift
 &quot;Do you think I&#39;d get laid off too?&quot;&lt;br&gt;
 &quot;Huh...ah...umm...&quot; (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] scrunched up (if: $isMale is true)[his](else:)[her] little nose. &lt;br&gt;
 &quot;I hope not. But thanks to your savings discipline, we should be able to float by for half a year, more or less, if ever you do get laid off.&quot;&lt;br&gt;
-&quot;Me neither... I don&#39;t wanna fail the family, I&#39;m trying my hardest to. But it&#39;s getting a lot harder nowadays thanks to that (if: $setting is &quot;1960s&quot;)[(color: &quot;cyan&quot;)[stupid cold war going on].&quot;&lt;br&gt;](else-if: $setting is &quot;2000s&quot;)[(color: &quot;cyan&quot;)[horrible terrorist attack last september]. Nobody&#39;s travelling on air anymore.&quot;&lt;br&gt;](else:)[(color: &quot;cyan&quot;)[terrible virus running in our virtual reality game that&#39;s been sending our players into a coma].&quot;&lt;br&gt;]
+&quot;Me neither... I don&#39;t wanna fail the family, I&#39;m trying my hardest to. But it&#39;s getting a lot harder nowadays thanks to that (if: $setting is &quot;1960s&quot;)[(color: &quot;cyan&quot;)[stupid cold war going on].&quot;&lt;br&gt;](else-if: $setting is &quot;2000s&quot;)[(color: &quot;cyan&quot;)[horrible terrorist attack last september]. Nobody&#39;s travelling on air anymore.&quot;&lt;br&gt;](else:)[(color: &quot;cyan&quot;)[terrible computer virus running in this virtual reality game that&#39;s been sending my company&#39;s players into a coma].&quot;&lt;br&gt;]
 &quot;Ah..ah...&#39;&#39;Ah-chk!&#39;&#39;&quot;&lt;br&gt;&lt;br&gt;
 
 (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] rubbed (if: $isMale is true)[his](else:)[her] nose after sneezing, then (if: $isMale is true)[his](else:)[her] big eyes widened in utter shock after (if: $isMale is true)[he](else:)[she] saw the clear mucus covering (if: $isMale is true)[his](else:)[her] little palm.&lt;br&gt;&lt;br&gt;
@@ -2437,9 +2642,8 @@ Casey and Cory naturally didn&#39;t expect you to learn how to say either so qui
 ]
 (else:)[
 (set: $FirstWord to &quot;baby&quot;)
-Casey and Cory didn&#39;t expect your first word to be &quot;baby,&quot; and they fall into their stomachs laughing at the absurdity of it all. You look at them with judgement---your parents are acting like complete children!&lt;br&gt;&lt;br&gt;Of course, you didn&#39;t actually think of that. You still didn&#39;t completely understand the language of the world you were born in, but your little brain definitely thought of something similar along that line in your itty-bitty baby brain.&lt;br&gt;]
-}
-{
+Casey and Cory didn&#39;t expect your first word to be &quot;baby,&quot; and they fall into their stomachs laughing at the absurdity of it all. You look at them with judgement---your parents are acting like complete children!&lt;br&gt;&lt;br&gt;Of course, you didn&#39;t actually think of that. You still didn&#39;t completely understand the language of the world you were born in, but your little brain definitely thought of something similar along that line in your itty-bitty baby brain.&lt;br&gt;&lt;br&gt;]
+
 (if: $DaddyVisit is true or $MommyVisit is true)[
 It was late afternoon. You would normally wake up before your parents but (if: $DaddyVisit is true)[Cory](else:)[Casey]&#39;s late night visit the other day disrupted your usual routine. By the time you woke up, you had Pepper checking up on you at the crib. She purred against your hand, which tickled you awake.&lt;br&gt;&lt;br&gt;
 
@@ -2460,24 +2664,23 @@ You look at the big black creature behind the crib fence with wide eyes, looking
 
 (if: $DaddyVisit is true)[Casey](else-if: $MommyVisit is true)[Cory]&#39;s eyes lit up, and (if: $DaddyVisit is true)[she](else-if: $MommyVisit is true)[he] excitedly agreed without hesitation. &quot;I bet he&#39;s gonna say (if: $DaddyVisit is true)[(color: &quot;cyan&quot;)[mama]](else-if: $MommyVisit is true)[(color: &quot;cyan&quot;)[dada]], first!&quot;&lt;br&gt;&lt;br&gt;
 
-Less than ten minutes after you were placed off the crib, and onto the playmat---did you finally say your &#39;first word&#39; to your parents. That was your (if: $DaddyVisit is true)[mother](else-if: $MommyVisit is true)[father]&#39;s happiest day of (if: $DaddyVisit is true)[her](else-if: $MommyVisit is true)[his] life!&lt;br&gt;&lt;br&gt;
+Less than ten minutes after you were placed off the crib, and onto the playmat---did you finally say your &#39;first word&#39; to your parents. That was your (if: $DaddyVisit is true)[mother](else-if: $MommyVisit is true)[father]&#39;s happiest day of (if: $DaddyVisit is true)[her](else-if: $MommyVisit is true)[his] life!&lt;br&gt;
 ]
 (else-if: $DaddyVisit is false and $MommyVisit is false and $NahsTheWord is true)[
 &quot;&#39;&#39;Puppy!!!&#39;&#39;&quot; You eagerly squealed. Your parents stare as Sonny excitedly ran over---almost knocking you down with him, but he not-so-gracefully pushed himself away from you despite the strong momentum he had from rushing into the room. &quot;Awooo!&quot;&lt;br&gt;&lt;br&gt;
 &quot;...Did... Did Sonny just steal our (if: $isMale is true)[sons](else:)[daughters]&#39; first word?&quot;&lt;br&gt;
 &quot;Yeah...you heard that right...&quot;&lt;br&gt;&lt;br&gt;
 
-The two watched in despair as Sonny licked you into a clean, giggling bundle of joy. &quot;&#39;&#39;Puppy!!!&#39;&#39;&quot; As for how you learned that word? It&#39;s naturally thanks to your parents efforts in reading you bedtime stories every night about one of your favourite stories: The Goodest Boy by Cynthia. Of course that wasn&#39;t the only story you liked, but it was the most memorable thanks to its amazing onomatopeia-filled content about what a good puppy should say and not say. Your parents will never figure this one out.
+The two watched in despair as Sonny licked you into a clean, giggling bundle of joy. &quot;&#39;&#39;Puppy!!!&#39;&#39;&quot; As for how you learned that word? It&#39;s naturally thanks to your parents efforts in reading you bedtime stories every night about one of your favourite stories: The Goodest Boy by Cynthia. Of course that wasn&#39;t the only story you liked, but it was the most memorable thanks to its amazing onomatopeia-filled content about what a good puppy should say and not say. Your parents will never figure this one out.&lt;br&gt;
 ]
 (else-if: $DaddyVisit is false and $MommyVisit is false and $MomsTheWord is true and $DadsTheWord is false)[
-She&#39;ll never fail to not bring this up to her husband, if ever the opportunity presents itself.
+She&#39;ll never fail to not bring this up to her husband, if ever the opportunity presents itself.&lt;br&gt;
 ]
 (else-if: $DaddyVisit is false and $MommyVisit is false and $MomsTheWord is false and $DadsTheWord is true)[
-But he&#39;ll never fail to not bring this up his wife, if ever the opportunity presents itself.
+But he&#39;ll never fail to not bring this up his wife, if ever the opportunity presents itself.&lt;br&gt;
 ]
-(else:)[This is a core moment that your parents will always bring up with you after you&#39;ve grown old enough to achieve self-awareness.]
+(else:)[This is a core moment that your parents will always bring up with you after you&#39;ve grown old enough to achieve self-awareness.&lt;br&gt;]
 }
-
 (link: &quot;Next &gt;&gt;&gt;&quot;)[
     (if: $babyEvents&#39;s length &gt; 0)[
     	(set: $babyhood to true)
@@ -2744,7 +2947,79 @@ To Be Continued
 (if: $Beauty &lt; 0)[(set: $Beauty to 0)]
 
 
-}</tw-passagedata></tw-storydata>
+}</tw-passagedata><tw-passagedata pid="52" name="TermsAndConditions" tags="" position="75,325" size="100,100">{
+(set: $agreed to false)
+
+---
+Please read before you play.
+---
+###Greed&#39;s Interactive Novel Terms of Use &amp; Ownership Agreement
+---
+
+&#39;&#39;Effective Date:&#39;&#39; 5/15/2026&lt;br&gt;&lt;br&gt;
+
+&#39;&#39;1. Ownership of Content&#39;&#39;&lt;br&gt;&lt;br&gt;
+
+All content within &amp;lsqb;Greed&#39;s Interactive Novel&amp;rsqb;, including but not limited to storyline, characters, text, dialogue branching, code, and media assets (&quot;Content&quot;), is the sole property of &amp;lsqb;Jerian Gianna A. Morales&amp;rsqb; (&quot;Owner&quot;). This project is proprietary. All rights not expressly granted herein are reserved by the Owner.&lt;br&gt;&lt;br&gt;
+
+&#39;&#39;2. License Grant to Users&#39;&#39;&lt;br&gt;&lt;br&gt;
+
+By accessing or playing this interactive fiction, the Owner grants you a non-exclusive, non-transferable, revocable, limited license to access and use the Content for personal, non-commercial entertainment purposes only.&lt;br&gt;&lt;br&gt;
+
+&#39;&#39;3. Beta Testing and Authorized Modifications&#39;&#39;&lt;br&gt;&lt;br&gt;
+
+Modifications, code changes, or asset contributions are strictly prohibited, with the sole exception of individuals explicitly designated by the Owner as &quot;Authorized Beta Testers.&quot;&lt;br&gt;&lt;br&gt;
+
+* Any modifications made by Authorized Beta Testers remain the property of the Owner.&lt;br&gt;&lt;br&gt;
+
+* Testers grant the Owner an irrevocable, perpetual, royalty-free license to integrate their feedback, bug fixes, or minor edits into the main project.&lt;br&gt;&lt;br&gt;
+
+&#39;&#39;4. Fan Fiction Policy&#39;&#39;&lt;br&gt;&lt;br&gt;
+
+The Owner warmly welcomes and permits the creation of fan fiction, fan art, and secondary fan works based on this project, provided that:&lt;br&gt;&lt;br&gt;
+
+* The fan work is entirely non-commercial and free to access.&lt;br&gt;&lt;br&gt;
+
+* The fan work clearly attributes the original characters and setting to &amp;lsqb;Jerian Gianna A. Morales&amp;rsqb;&lt;br&gt;&lt;br&gt;
+
+* The fan work does not copy and paste large blocks of exact text or source code from this repository.&lt;br&gt;&lt;br&gt;
+
+&#39;&#39;5. Restrictions on Use&#39;&#39;&lt;br&gt;&lt;br&gt;
+
+You agree NOT to:&lt;br&gt;&lt;br&gt;
+
+* Sell, monetize, or charge access fees for this Content or any derivative works.&lt;br&gt;&lt;br&gt;
+
+* Redistribute, re-upload, or mirror the source files on other platforms without prior written consent.&lt;br&gt;&lt;br&gt;
+
+* Use any portion of the Content to train generative Artificial Intelligence (AI) models.&lt;br&gt;&lt;br&gt;
+
+&#39;&#39;6. GitHub Terms Alignment&#39;&#39;&lt;br&gt;&lt;br&gt;
+
+This repository is hosted on GitHub. Your access is also governed by the public repository viewing rules outlined in the GitHub Terms of Service.&lt;br&gt;&lt;br&gt;
+
+&#39;&#39;7. Changes to These Terms&#39;&#39;&lt;br&gt;&lt;br&gt;
+
+The Owner reserves the right to modify, update, or change these terms at any time. Any changes will be posted directly to this file, and your continued use of the repository or content after updates constitutes acceptance of the new terms.&lt;br&gt;&lt;br&gt;
+
+&#39;&#39;8. Contact&#39;&#39;&lt;br&gt;&lt;br&gt;
+
+For questions regarding these terms, please contact: &lt;br&gt;
+kartkid123.5@gmail.com/kartkid404
+---
+}
+(checkbox: bind $agreed, &quot;I agree to the terms and conditions.&quot;)
+
+(link: &quot;Proceed&quot;)[
+    (if: $agreed)[
+        (go-to: &quot;Life_&quot;)
+    ]
+    (else:)[
+        (alert: &quot;Please check the agreement box to continue.&quot;)
+        (go-to: &quot;TermsAndConditions&quot;)
+    ]
+]
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
