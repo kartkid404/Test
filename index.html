@@ -17,6 +17,7 @@ But we all begin from the same humble beginning...
 
 (link: &quot;Begin Life.&quot;)[(go-to: &quot;Begin Life&quot;)]
 {
+
 (set: $choice to &quot;&quot;)
 
 (set: $age to 0)
@@ -90,6 +91,9 @@ But we all begin from the same humble beginning...
 (set: $Nonchalant to false)
 (set: $GoodyTwoShoes to false)
 (set: $SillyGoose to false)
+(set: $albinism to false)
+
+
 (set: $MomsTheWord to false)
 (set: $NahsTheWord to false)
 (set: $DadsTheWord to false)
@@ -131,6 +135,7 @@ But we all begin from the same humble beginning...
 (set: $ChangeSex to 0)
 
 (set: $inventory to (array:))
+(set: $genesIN to (array:))
 
 (set: $liked to &quot;Of course! Everybody likes you, and believes you&#39;re the coolest, swaggiest person alive. It will be easier to befriend others thanks to how fast information spreads about you.&quot;)
 (set: $disliked to &quot;Does being infamous count? Everybody hates you now. It will be harder a lot harder to befriend others thanks to how fast information spreads about you.&quot;)
@@ -151,7 +156,7 @@ A pair of distinguished students studying at a university in the United Kingdom 
 And now, many years after their marriage, they began to plan for a family at Melbourne, Australia. That&#39;s where you come in!
 
 (link: &quot;You were Born.&quot;)[(go-to: &quot;You were Born&quot;)]
-</tw-passagedata><tw-passagedata pid="3" name="Male" tags="" position="450,350" size="100,100">&quot;...boy.&quot;
+</tw-passagedata><tw-passagedata pid="3" name="aMale" tags="" position="450,350" size="100,100">&quot;...boy.&quot;
 
 Your father looked delighted, but you had a feeling he didn&#39;t mind if it were the other way around either.
 
@@ -165,7 +170,7 @@ Your mother didn&#39;t react, presumably having lost consciousness at some point
 &quot;(link: &quot;...Cory,&quot;)[(set: $name to &quot;Cory&quot;)(go-to: &quot;The Name&quot;)] after me.&quot;
 &quot;(link: &quot;...Orion.&quot;)[(set: $name to &quot;Orion&quot;)(go-to: &quot;The Name&quot;)]&quot;
 &quot;(link: &quot;...Tobias.&quot;)[(set: $name to &quot;Tobias&quot;)(go-to: &quot;The Name&quot;)]&quot;
-&quot;(link: &quot;...Alex.&quot;)[(set: $name to &quot;Alex&quot;)(go-to: &quot;The Name&quot;)]&quot;</tw-passagedata><tw-passagedata pid="4" name="Female" tags="" position="450,450" size="100,100">&quot;...girl.&quot;
+&quot;(link: &quot;...Alex.&quot;)[(set: $name to &quot;Alex&quot;)(go-to: &quot;The Name&quot;)]&quot;</tw-passagedata><tw-passagedata pid="4" name="aFemale" tags="" position="450,450" size="100,100">&quot;...girl.&quot;
 
 Your father looked delighted, but you had a feeling he didn&#39;t mind if it were the other way around either.
 
@@ -179,72 +184,158 @@ Your mother didn&#39;t react, presumably having lost consciousness at some point
 &quot;(link: &quot;...Cory,&quot;)[(set: $name to &quot;Cory&quot;)(go-to: &quot;The Name&quot;)] after me.&quot;
 &quot;(link: &quot;...Aurora.&quot;)[(set: $name to &quot;Aurora&quot;)(go-to: &quot;The Name&quot;)]&quot;
 &quot;(link: &quot;...Jade.&quot;)[(set: $name to &quot;Jade&quot;)(go-to: &quot;The Name&quot;)]&quot;
-&quot;(link: &quot;...Alex.&quot;)[(set: $name to &quot;Alex&quot;)(go-to: &quot;The Name&quot;)]&quot;</tw-passagedata><tw-passagedata pid="5" name="Babyhood I: Chapter 1" tags="" position="650,275" size="100,100">Casey and Cory left the hospital just a few days later. Casey needed a lot of rest, so Cory did most of the work. Thankfully, their new little babe seems to be quite peaceful, sleeping throughout the car ride back to home.
+&quot;(link: &quot;...Alex.&quot;)[(set: $name to &quot;Alex&quot;)(go-to: &quot;The Name&quot;)]&quot;</tw-passagedata><tw-passagedata pid="5" name="Babyhood I: Chapter 1" tags="" position="650,275" size="100,100">Casey and Cory left the hospital just a few days later. Casey needed a lot of rest, so Cory did most of the work. Thankfully, their new little babe seems to be quite peaceful, sleeping throughout the car ride back to home in a little swaddle on the baby carriage strapped to their trusty (if: $setting is &quot;1960s&quot;)[1950s Ford Fairlane](else-if: $setting is &quot;2000s&quot;)[1990s Honda Civic](else:)[2030s Hyundai Custin].
 
-It will be sometime before the relatives visit, not that Cory wanted them over as soon as the baby was born. He wanted $name (if: $name is &quot;Cory&quot; and $isMale is true)[Jr.](else-if: ($name is &quot;Cory&quot; and $isMale is false) or $name is &quot;Casey&quot;) [O&#39;](else:)[] to get familiar with (if: $isMale is true)[his](else:)[her] parents first.
+It will be sometime before the relatives visit, not that Cory wanted them over as soon as the baby was born. He wanted $cName to get familiar with $chis parents first.
 ---
 Arriving in this new place is quite scary. But something about it felt familiar. Was it the heater that reminded you of your days in the womb? The quiet whirring of that strange disk walking on the floor? The noise of the three furry creatures eagerly waiting behind the front door of the house?
 
 You didn&#39;t understand what was so familiar about it, so you just didn&#39;t think about it. Right now, all you want to do is to nap again. Off to the dream world, little one!
 
-[[Zzz...Zzz...]]</tw-passagedata><tw-passagedata pid="6" name="Name Change" tags="" position="725,525" size="100,100">(if: $ChangeSex is 0)[Is it because of their surname?&lt;br&gt;](else:)[]...
-{(if: $isMale is true)[&quot;...Just as we planned, we will name you...&quot;&lt;br&gt;
+(link: &quot;Next &gt;&gt;&gt;&quot;)[
+	(goto: &quot;Zzz...Zzz...&quot;)
+]</tw-passagedata><tw-passagedata pid="6" name="Name Change" tags="" position="725,525" size="100,100">{(if: $isMale is true)[&quot;...Just as we planned, we will name you...&quot;&lt;br&gt;
 ---
-&quot;(link: &quot;...London,&quot;)[(set: $name to &quot;London&quot;)(go-to: &quot;The Name&quot;)] after your mother&#39;s birthplace.&quot;&lt;br&gt;
-&quot;(link: &quot;...Edmon,&quot;)[(set: $name to &quot;Edmon&quot;)(go-to: &quot;The Name&quot;)] after my birthplace.&quot;&lt;br&gt;
-&quot;(link: &quot;...Casey,&quot;)[(set: $name to &quot;Casey&quot;)(go-to: &quot;The Name&quot;)] after your mother.&quot;&lt;br&gt;
-&quot;(link: &quot;...Cory,&quot;)[(set: $name to &quot;Cory&quot;)(go-to: &quot;The Name&quot;)] after me.&quot;&lt;br&gt;
-&quot;(link: &quot;...Orion,&quot;)[(set: $name to &quot;Orion&quot;)(go-to: &quot;The Name&quot;)] after my birthplace.&quot;&lt;br&gt;
-&quot;(link: &quot;...Tobias.&quot;)[(set: $name to &quot;Tobias&quot;)(go-to: &quot;The Name&quot;)]&quot;&lt;br&gt;
-&quot;(link: &quot;...Alex.&quot;)[(set: $name to &quot;Alex&quot;)(go-to: &quot;The Name&quot;)]&quot;]
+&quot;(link: &quot;...London,&quot;)[
+(set: $name to &quot;London&quot;)
+(go-to: &quot;The Name&quot;)
+] after your mother&#39;s birthplace.&quot;&lt;br&gt;
+
+&quot;(link: &quot;...Edmon,&quot;)[
+(set: $name to &quot;Edmon&quot;)
+(go-to: &quot;The Name&quot;)] after my birthplace.&quot;&lt;br&gt;
+
+&quot;(link: &quot;...Casey,&quot;)[
+(set: $name to &quot;Casey&quot;)
+(go-to: &quot;The Name&quot;)] after your mother.&quot;&lt;br&gt;
+
+&quot;(link: &quot;...Cory,&quot;)[
+(set: $name to &quot;Cory&quot;)
+(go-to: &quot;The Name&quot;)] after me.&quot;&lt;br&gt;
+
+&quot;(link: &quot;...Orion,&quot;)[
+(set: $name to &quot;Orion&quot;)
+(go-to: &quot;The Name&quot;)] after my birthplace.&quot;&lt;br&gt;
+
+&quot;(link: &quot;...Tobias.&quot;)[
+(set: $name to &quot;Tobias&quot;)
+(go-to: &quot;The Name&quot;)]&quot;&lt;br&gt;
+
+&quot;(link: &quot;...Alex.&quot;)[
+(set: $name to &quot;Alex&quot;)
+(go-to: &quot;The Name&quot;)]&quot;
+]
+
 (if: $isMale is false)[&quot;...Just as we planned, we will name you...&quot;&lt;br&gt;
 ---
-&quot;(link: &quot;...London,&quot;)[(set: $name to &quot;London&quot;)(go-to: &quot;The Name&quot;)] after your mother&#39;s birthplace.&quot;&lt;br&gt;
-&quot;(link: &quot;...Edmon,&quot;)[(set: $name to &quot;Edmon&quot;)(go-to: &quot;The Name&quot;)] after my birthplace.&quot;&lt;br&gt;
-&quot;(link: &quot;...Casey,&quot;)[(set: $name to &quot;Casey&quot;)(go-to: &quot;The Name&quot;)] after your mother.&quot;&lt;br&gt;
-&quot;(link: &quot;...Cory,&quot;)[(set: $name to &quot;Cory&quot;)(go-to: &quot;The Name&quot;)] after me.&quot;&lt;br&gt;
-&quot;(link: &quot;...Aurora,&quot;)[(set: $name to &quot;Aurora&quot;)(go-to: &quot;The Name&quot;)] after my birthplace.&quot;&lt;br&gt;
-&quot;(link: &quot;...Jade.&quot;)[(set: $name to &quot;Jade&quot;)(go-to: &quot;The Name&quot;)]&quot;&lt;br&gt;
-&quot;(link: &quot;...Alex.&quot;)[(set: $name to &quot;Alex&quot;)(go-to: &quot;The Name&quot;)]&quot;]}
+&quot;(link: &quot;...London,&quot;)[
+(set: $name to &quot;London&quot;)
+(go-to: &quot;The Name&quot;)] after your mother&#39;s birthplace.&quot;&lt;br&gt;
+
+&quot;(link: &quot;...Edmon,&quot;)[
+(set: $name to &quot;Edmon&quot;)
+(go-to: &quot;The Name&quot;)] after my birthplace.&quot;&lt;br&gt;
+
+&quot;(link: &quot;...Casey,&quot;)[
+(set: $name to &quot;Casey&quot;)
+(go-to: &quot;The Name&quot;)] after your mother.&quot;&lt;br&gt;
+
+&quot;(link: &quot;...Cory,&quot;)[
+(set: $name to &quot;Cory&quot;)
+(go-to: &quot;The Name&quot;)] after me.&quot;&lt;br&gt;
+
+&quot;(link: &quot;...Aurora,&quot;)[
+(set: $name to &quot;Aurora&quot;)
+(go-to: &quot;The Name&quot;)] after my birthplace.&quot;&lt;br&gt;
+
+&quot;(link: &quot;...Jade.&quot;)[
+(set: $name to &quot;Jade&quot;)
+(go-to: &quot;The Name&quot;)]&quot;&lt;br&gt;
+
+&quot;(link: &quot;...Alex.&quot;)[
+(set: $name to &quot;Alex&quot;)
+(go-to: &quot;The Name&quot;)]&quot;]
+}
+---</tw-passagedata><tw-passagedata pid="7" name="Change Sex." tags="" position="575,525" size="100,100">{
 ---
-Actually, it&#39;s (if: $isMale is true)[his](else:)[her] sex I want to change.
-[[Change Sex.]]
-</tw-passagedata><tw-passagedata pid="7" name="Change Sex." tags="" position="575,525" size="100,100">(if: $isMale is true)[Very well, you are now a girl. (set: $isMale to false)(set: $ChangeSex to it+1)](else:)[Very well, you are now a boy.(set: $isMale to true)(set: $ChangeSex to it+1)]
+(set: $ChangeSex to it+1)
+(if: $isMale is true)[
+Very well, you are now a girl.
+(set: $isMale to false)
+(set: $ChangeSex to it+1)
+---
+]
+(else:)[
+Very well, you are now a boy.
+(set: $isMale to true)
+(set: $ChangeSex to it+1)
+---
+]
 
-The doctor hastily ran back to the room in apology. &quot;I am so sorry, but I got it all wrong! I wasn&#39;t wearing my prescription glasses and mistook the gender of your child. (if: $isMale is true) [He&#39;s actually a male.&quot;](if: $isMale is false) [She&#39;s actually a female.&quot;]
+The doctor hastily ran back to the room in apology. &quot;I am so sorry, but I got it all wrong! I wasn&#39;t wearing my contacts and mistook the gender of your child. $cHe is actually a $cmale.&quot;&lt;br&gt;&lt;br&gt;
 
-The Kovenberg couple laughed and forgave the doctor. They understood that professionals like them work their hardest for the people. A minor mistake like this is forgivable.
+The Kovenberg couple laughed and forgave the doctor. They understood that professionals like them work their hardest for the people. A minor mistake like this is forgivable.&lt;br&gt;&lt;br&gt;
 
-[[Continue.-&gt;Name Change]]</tw-passagedata><tw-passagedata pid="8" name="Zzz...Zzz..." tags="" position="725,400" size="100,100">$name finally grew out of (if: $isMale is true)[his](else:)[her] reddish, almost raisin-like appearance that only parents could love. (if: $isMale is true)[He](else:)[She] mostly inherited (if: $isMale is true)[his](else:)[her] father&#39;s looks, like his skin which was...
+(link: &quot;Change Name &gt;&gt;&gt;&quot;)[
+	(goto: &quot;Name Change&quot;)
+]&lt;br&gt;&lt;br&gt;
+
+(color: &quot;grey&quot;)[Author&#39;s Note: Names need to match the gender of your character for narrative purposes. But let me know if you want names to be more flexible and not restricted by sex or gender in future updates.]
+
+}</tw-passagedata><tw-passagedata pid="8" name="Zzz...Zzz..." tags="" position="725,400" size="100,100">{
+(set: $trait to &quot;Albinism&quot;)
+$cName finally grew out of $chis reddish, almost raisin-like appearance that only parents could love. $cHe inherited most of $chis father&#39;s looks, like his skin which was...&lt;br&gt;&lt;br&gt;
 
 (link-reveal-goto: &quot;Pale,&quot;, &quot;Eyes&quot;)[
-	(set: $skin to &quot;pale&quot;)] like the skin of a ghost.
+	(set: $skin to &quot;pale&quot;)
+    (set: $albinism to true)
+    (if: (history:) does not contain (passage:)&#39;s name)[
+		(set: $genesIN to it + (array: $trait))
+	(else:)[]
+	]
+    ] like the skin of a ghost. It&#39;s essentially transluscent enough for you to see the little blue veins in your body. It is also the easiest to bruise. (Earn genetic trait: (color: &quot;red&quot;)[Albinism].)&lt;br&gt;&lt;br&gt;
     
 (link-reveal-goto: &quot;Fair,&quot;, &quot;Eyes&quot;)[
-	(set: $skin to &quot;fair&quot;)] (if: $isMale is true)[he](else:)[she]&#39;ll be investing a lot on sunscreen in the future.
+	(set: $skin to &quot;fair&quot;)] a clear and delicate complexion that burns easily under the sun.&lt;br&gt;&lt;br&gt;
     
 (link-reveal-goto: &quot;Olive,&quot;, &quot;Eyes&quot;)[
-	(set: $skin to &quot;olive&quot;)] the best of both worlds.
+	(set: $skin to &quot;olive&quot;)] the skin type with the most complex undertone.&lt;br&gt;&lt;br&gt;
     
 (link-reveal-goto: &quot;Tan,&quot;, &quot;Eyes&quot;)[
-	(set: $skin to &quot;tan&quot;)] a sun-kissed complexion that looks best in summer.
+	(set: $skin to &quot;tan&quot;)] a sun-kissed complexion that looks best in summer.&lt;br&gt;&lt;br&gt;
     
 (link-reveal-goto: &quot;Ebony,&quot;, &quot;Eyes&quot;)[
-	(set: $skin to &quot;ebony&quot;)] a rich dark skin that can compete with (if: $isMale is true)[his](else:)[her] mother&#39;s favorite chocolate.</tw-passagedata><tw-passagedata pid="9" name="Eyes" tags="" position="900,300" size="100,100">You had his eyes, which were a beautiful pair of...
+	(set: $skin to &quot;ebony&quot;)] dark skin that is rich in collagen and keeps you looking like you&#39;re twenty in your forties.&lt;br&gt;&lt;br&gt;
+}</tw-passagedata><tw-passagedata pid="9" name="Eyes" tags="" position="900,300" size="100,100">{
+(if: $albinism is true)[
+---
+(color: &quot;yellow&quot;)[Hint:](color: &quot;grey&quot;)[Some greyed out choices require certain conditions to be unlocked.]](else:)[]
+---
+You had his eyes, which were a beautiful pair of...&lt;br&gt;&lt;br&gt;
 
-(link-reveal-goto: &quot;...brown eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;brown&quot;)] a rich, chestnut brown which looks vibrant under the sun—like the most exquisite honey.
+(link-reveal-goto: &quot;...brown eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;brown&quot;)] a rich, chestnut brown which looks vibrant under the sun—like the most exquisite honey.&lt;br&gt;&lt;br&gt;
 
-(link-reveal-goto: &quot;...dark brown eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;darkBrown&quot;)] that hooks others soul by the sheer intensity of the rich, almost black hue.
+(if: $albinism is true)[
+(color: &quot;grey&quot;)[
+...dark brown eyes, that hook others soul by the sheer intensity of their rich, almost black hue.
+]
+]
+(else:)[
+	(link-reveal-goto: &quot;...dark brown eyes,&quot;, &quot;Hair&quot;)[
+	(set: $eyes to &quot;dark brown&quot;)
+	] that hook others soul by the sheer intensity of the rich, almost black hue.
+]&lt;br&gt;&lt;br&gt;
 
-(link-reveal-goto: &quot;...blue eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;blue&quot;)] which remind people of the morning skies on clear days. But the pale color leaves most ill at ease under its scrutiny.
+(link-reveal-goto: &quot;...blue eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;blue&quot;)] which remind people of the morning skies on clear days. But the pale color leaves most ill at ease under its scrutiny.&lt;br&gt;&lt;br&gt;
 
-(link-reveal-goto: &quot;...hazel eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;hazel&quot;)] with bursts of shrub-like green and golden flecks flocking about the pupil of the eye.
+(link-reveal-goto: &quot;...hazel eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;hazel&quot;)] with bursts of shrub-like green and golden flecks flocking about the pupil of the eye.&lt;br&gt;&lt;br&gt;
 
-(link-reveal-goto: &quot;...green eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;green&quot;)] so vibrant that it resembled your father&#39;s favorite liqeuer; chartreuse.
+(link-reveal-goto: &quot;...green eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;green&quot;)] so vibrant that it resembled your father&#39;s favorite liqeuer; chartreuse.&lt;br&gt;&lt;br&gt;
 
-(link-reveal-goto: &quot;...amber eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;amber&quot;)] it was like copper, and almost golden. It was the dreamy kind that looked ethereal upon closer look.
+(link-reveal-goto: &quot;...amber eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;amber&quot;)] it was like copper, and almost golden. It was the dreamy kind that looked ethereal upon closer look.&lt;br&gt;&lt;br&gt;
 
-(link-reveal-goto: &quot;...grey eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;grey&quot;)] a misty version that resembled the mountain fogs. It looked cold, and calculating—but only the holder themself knows what truly lies within.</tw-passagedata><tw-passagedata pid="10" name="Hair" tags="" position="1000,300" size="100,100">You also had his hair. It&#39;s your mother&#39;s favorite kind, she would always find herself running her hand down his short,...
+(link-reveal-goto: &quot;...grey eyes,&quot;, &quot;Hair&quot;)[(set: $eyes to &quot;grey&quot;)] a misty version that resembled the mountain fogs. It looked cold, and calculating—but only the holder themself knows what truly lies within.
+}</tw-passagedata><tw-passagedata pid="10" name="Hair" tags="" position="1000,300" size="100,100">You also had his hair. It&#39;s your mother&#39;s favorite kind, she would always find herself running her hand down his short,...
 
 (link-reveal-goto: &quot;...kinky hair,&quot;,&quot;lengthHair&quot;)[(set: $hair to &quot;kinky&quot;)] which was both coarse, and thick. It had extremely tight coils that is prone to damage. Make sure you take good care of yours as you grow up.
 
@@ -277,17 +368,31 @@ Regardless of what they say, you still feel like you&#39;d look good with $lengt
 
 (if: $Insecure is false)[(link: &quot;I don&#39;t care, I want my hair that way. Let&#39;s continue.&quot;)[(set: $Will to it+5)(go-to: &quot;hairColor&quot;)]](else:)[(link:&quot;I like it better this way now. Let&#39;s continue.&quot;)[(set: $Will to it-2)(go-to: &quot;hairColor&quot;)]]
 
-(link: &quot;Wait, I changed my mind.&quot;)[(set: $Insecure to true)(go-to: &quot;lengthHair&quot;)]</tw-passagedata><tw-passagedata pid="13" name="hairColor" tags="" position="900,500" size="100,100">Though you took on your father&#39;s looks for the most part, you inherited one thing from your mother that made you stand out. It was her...
+(link: &quot;Wait, I changed my mind.&quot;)[(set: $Insecure to true)(go-to: &quot;lengthHair&quot;)]</tw-passagedata><tw-passagedata pid="13" name="hairColor" tags="" position="900,500" size="100,100">{
+(if: $albinism is true)[
+---
+(color: &quot;yellow&quot;)[Hint:](color: &quot;grey&quot;)[Some greyed out choices require certain conditions to be unlocked.]](else:)[]
+---
+Though you took on your father&#39;s looks for the most part, you inherited one thing from your mother that made you stand out. It was her...&lt;br&gt;&lt;br&gt;
 
-(link-reveal-goto: &quot;...beautiful golden locks,&quot;,&quot;Movement&quot;)[(set: $colorHair to &quot;gold blonde.&quot;)(set: $Beauty to it+1)] it resembled the color of the hair of the beautiful princes and princesses in the picturebooks your mother sometimes read to you at night.
+(link-reveal-goto: &quot;...beautiful golden locks,&quot;,&quot;Movement&quot;)[(set: $colorHair to &quot;gold blonde.&quot;)(set: $Beauty to it+1)] it resembled the color of the hair of the beautiful princes and princesses in the picturebooks your mother sometimes read to you at night.&lt;br&gt;&lt;br&gt;
 
-(link-reveal-goto: &quot;...gorgeous platinum hair,&quot;,&quot;Movement&quot;)[(set: $colorHair to &quot;platinum blonde&quot;)(set: $LittleMagpie to true)] like the shiny jewelry you mom usually wore for work. It always caught your eye first, but your mother never let you touch them. One of these days...you&#39;ll find a way!
+(link-reveal-goto: &quot;...gorgeous platinum hair,&quot;,&quot;Movement&quot;)[(set: $colorHair to &quot;platinum blonde&quot;)(set: $LittleMagpie to true)] like the shiny jewelry you mom usually wore for work. It always caught your eye first, but your mother never let you touch them. One of these days...you&#39;ll find a way!&lt;br&gt;&lt;br&gt;
 
-(link-reveal-goto: &quot;...jet-black curls,&quot;,&quot;Movement&quot;)[(set: $colorHair to &quot;black&quot;)(set: $rel_Pepper to it+10] it was as dark as your beautiful black ragdoll cat named &quot;Pepper.&quot; You thought she was your sibling due to the uncanny resemblance of their fur to your mothers hair.
+(if: $albinism is true)[
+	(color: &quot;grey&quot;)[...jet-black curls, it was as dark as your beautiful black ragdoll cat named &quot;Pepper.&quot; You first thought she was your sibling due to the uncanny resemblance of their fur to your mother&#39;s hair.]
+]
+(else:)[
+	(link-reveal-goto: &quot;...jet-black curls,&quot;,&quot;Movement&quot;)[
+		(set: $colorHair to &quot;black&quot;)(set: $rel_Pepper to it+10
+	] it was as dark as your beautiful black ragdoll cat named &quot;Pepper.&quot; You thought she was your sibling due to the uncanny resemblance of their fur to your mother&#39;s hair.
+	]
+&lt;br&gt;&lt;br&gt;
 
-(link-reveal-goto: &quot;...silky brown waves,&quot;,&quot;Movement&quot;)[(set: $colorHair to &quot;brown&quot;)] (if: $eyes is &quot;brown&quot;)[(set: $Rel_Dad to it+1)you notice how it shines under the sunlight, just like your fathers brown eyes.] (else:)[you notice how it shines under the sunlight.]
+(link-reveal-goto: &quot;...silky brown waves,&quot;,&quot;Movement&quot;)[(set: $colorHair to &quot;brown&quot;)] (if: $eyes is &quot;brown&quot;)[(set: $Rel_Dad to it+1)you notice how it shines under the sunlight, just like your fathers brown eyes.] (else:)[you notice how it shines under the sunlight.]&lt;br&gt;&lt;br&gt;
 
-(link-reveal-goto: &quot;...voluminous ginger tresses,&quot;,&quot;Movement&quot;)[(set: $colorHair to &quot;ginger&quot;)(set: $Rel_Dad to it+5)] (if: $isMale is true)[just as red as the toy racecar your father bought you. Speaking of, where did it go?](else:)[just as red as the dress of the toy doll your father bought you. Speaking of, where did it go?]</tw-passagedata><tw-passagedata pid="14" name="Movement" tags="" position="1125,300" size="100,100">{
+(link-reveal-goto: &quot;...voluminous ginger tresses,&quot;,&quot;Movement&quot;)[(set: $colorHair to &quot;ginger&quot;)(set: $Rel_Dad to it+5)] (if: $isMale is true)[just as red as the toy racecar your father bought you. Speaking of, where did it go?](else:)[just as red as the dress of the toy doll your father bought you. Speaking of, where did it go?]
+}</tw-passagedata><tw-passagedata pid="14" name="Movement" tags="" position="1125,300" size="100,100">{
 (set: $babyhood to true)
 $name groggily woke up, (if: $isMale is true)[his](else:)[her] big $eyes eyes fluttering open. (if: $isMale is true)[He](else:)[She] just woke up from another long nap when (if: $isMale is true)[he](else:)[she] noticed that the place (if: $isMale is true)[his](else:)[her] mother is usually at was empty.}
 
@@ -343,6 +448,24 @@ What should (if: $isMale is true)[he](else:)[she] do?
 
 (link-reveal-goto:&quot;[Check Inventory]&quot;,&quot;Inventory&quot;)[]|(link-reveal-goto:&quot;[Check Relationships]&quot;,&quot;RelationshipMenu&quot;)[(color: &quot;grey&quot;)[(Contains Spoilers)]]|(link-reveal-goto:&quot;[Check Skills]&quot;,&quot;SkillsMenu&quot;)[]|(link-reveal-goto:&quot;[Check Background]&quot;,&quot;BackgroundMenu&quot;)[]|(link-reveal-goto:&quot;[Logbook]&quot;,&quot;UpdateLOG&quot;)[]|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
 }
+---
+###Basic Profile
+---
+Name: $cName Kovenberg
+Age: $age
+Sex: $cMale
+Education: N/A
+Occupation: Unemployed
+Genetic Traits: &lt;br&gt;{(if: $genesIN&#39;s length is 0)[
+N/A
+]
+(else:)[
+    (set: _count to 1)
+    (for: each _trait, ...$genesIN)[
+    _count. _trait (set: _count to it+1)
+    &lt;br&gt;
+    ]
+]}
 ---
 ### Attribute Stats (General)
 ---
@@ -400,7 +523,7 @@ You are considered &quot;(if: $age is &lt;=5)[(color: &quot;yellow&quot;)[cute]]
 		]
 	]
 ]
-(else-if: $eyes is &quot;blue&quot;)[Pale blue eyes that easily draws attention from people. It is a striking kind of color, almost bordering gray, if not for the blue flecks in them. You give off an (color: &quot;white&quot;)[untouchable, otherworldly] vibe.
+(else-if: $eyes is &quot;blue&quot;)[Pale blue eyes that easily draws attention from people. It is a striking kind of color, almost bordering gray, if not for the blue flecks in them. You give off an (color: &quot;lightpink&quot;)[untouchable, otherworldly] vibe.
     |blueInfoBlock&gt;[
 		(if: $showInfo)[
 			&lt;br&gt;&lt;br&gt;It&#39;a similar to the clear, morning sky. Or something like a shallow water surface, due to your iris striations resembling water foam but with a silver quality. The light in your eyes are easy to catch, but most people often feel uneasy under your gaze due to its strikingly cold quality. When you narrow them, you look like a predator seizing up prey. But otherwise, they are as mesmerizing as diamonds.&lt;br&gt;(link: &quot;Hide Info.&quot;)[
@@ -518,15 +641,23 @@ _outputSex and _outputRom.
 (if: $Nonchalant is true and $Insecure is false)[- Nonchalant](else-if: $Nonchalant is true and $Insecure is true)[- Fake Indifference](else:)[- ???/???]}
 ...
 (color: &quot;grey&quot;)[Note: Traits can be discovered through specific choices or fulfilling certain conditions. A trait can influence your character&#39;s story to a certain extent. It can also be a strength or a weakness.]
----
-</tw-passagedata><tw-passagedata pid="18" name="Birth" tags="" position="325,400" size="100,100">{(if: $birth is &quot;EasyBirth&quot;)[Your mother is grateful for your easy birth.&lt;br&gt;](else-if: $birth is &quot;DifficultBirth&quot;)[Your mother laments how she should have taken maternity classes.&lt;br&gt;&lt;br&gt;It was a long, and difficult birth. Your father risked having fractured hands to comfort your mother.](else:)[Your mother vowed to never have another child after you.&lt;br&gt;&lt;br&gt;It was a long, and difficult birth. Despite your mother&#39;s efforts, you just wouldn&#39;t get out. In the past, your father would have to choose between wife or child. But thanks to the technology of the world you were born, he can have both.&lt;br&gt;&lt;br&gt;Your mother had a C-Section.&lt;br&gt;]
+---</tw-passagedata><tw-passagedata pid="18" name="Birth" tags="" position="325,400" size="100,100">{
+
+(if: $birth is &quot;EasyBirth&quot;)[Your mother is grateful for your easy birth.&lt;br&gt;](else-if: $birth is &quot;DifficultBirth&quot;)[Your mother laments how she should have taken maternity classes.&lt;br&gt;&lt;br&gt;It was a long, and difficult birth. Your father risked having fractured hands to comfort your mother.](else:)[Your mother vowed to never have another child after you.&lt;br&gt;&lt;br&gt;It was a long, and difficult birth. Despite your mother&#39;s efforts, you just wouldn&#39;t get out. In the past, your father would have to choose between wife or child. But thanks to the technology of the world you were born, he can have both.&lt;br&gt;&lt;br&gt;Your mother had a C-Section.&lt;br&gt;]
 }
 The doctor pulled you out and followed standard procedure. Finally, you are back in that warm embrace. Two blurry faces appear in your vision. One felt comforting, and the other felt loving.
 
 &quot;Congratulations, you gave birth to a healthy baby...&quot;
 
-(link: &quot;AMAB:&quot;)[(set: $isMale to true)(set: $Str to it+2)(go-to: &quot;Male&quot;)] Assigned male at birth (color:&quot;grey&quot;)[(boy)]
-(link: &quot;AFAB:&quot;)[(set: $isMale to false)(set: $Courage to it+2)(go-to: &quot;Female&quot;)] Assigned female at birth (color:&quot;grey&quot;)[(girl)]</tw-passagedata><tw-passagedata pid="19" name="FreePlushie" tags="" position="1450,300" size="100,100">{
+(link: &quot;AMAB:&quot;)[
+(set: $isMale to true)
+(set: $Str to it+2)
+(go-to: &quot;aMale&quot;)] Assigned male at birth (color:&quot;grey&quot;)[(boy)]
+
+(link: &quot;AFAB:&quot;)[
+(set: $isMale to false)
+(set: $Courage to it+2)
+(go-to: &quot;aFemale&quot;)] Assigned female at birth (color:&quot;grey&quot;)[(girl)]</tw-passagedata><tw-passagedata pid="19" name="FreePlushie" tags="" position="1450,300" size="100,100">{
 (set: $item to &quot;Cute Plushie&quot;)
 (set: $person to &quot;Dad&quot;)
 (set: $newItem to (str:&quot;Congratulations! You received an Item: &quot;, $item, &quot; from &quot;, $person, &quot;.&quot;))
@@ -711,19 +842,77 @@ But... nothing lasts forever. Your comforting home felt too tight one day, and t
 (color: &quot;yellow&quot;)[WARNING:](color: &quot;grey&quot;)[ This will be your first major choice that will leave a heavy impact on your characters future.&lt;br&gt;&lt;br&gt;It will influence their storyline to a significant extent, as well as their personality, and other people&#39;s attitude towards them. You will encounter seemingly insignificant choices like these in the future, but there will be no warning unlike now. Remember...](color: &quot;red&quot;)[ EVERY ](color: &quot;grey&quot;)[choice matters.]
 </tw-passagedata><tw-passagedata pid="27" name="The Name" tags="" position="575,400" size="100,100">When your mother woke up, she felt that her husband read her mind. Seeing your cute little face, she agreed that you suited the name.
 {
-(if: $name is &quot;London&quot; or $name is &quot;Edmon&quot;)[&lt;br&gt;&quot;$name Kovenberg. I like it, maybe we&#39;ll visit there again someday.&quot; She coo&#39;ed at her child.&lt;br&gt;
+
+		(set: $cName to $name)
+		(if: $name is &quot;Cory&quot; and $isMale is true)[
+			(set: $cName to $name + &quot; Junior&quot;)
+			(set: $cPossessive to &quot;Junior&#39;s&quot;)
+		]
+		(else-if: $name is &quot;Cory&quot; or $name is &quot;Casey&quot;)[
+			(set: $cName to $name + &quot; O&#39;&quot;)
+			(set: $cPossessive to $cName + &quot;&#39;s&quot;)
+		]
+		(else-if: $name is &quot;Tobias&quot;)[
+			(set: $cPossessive to $name + &quot;&#39;&quot;)
+		]
+		(else:)[
+			(set: $cPossessive to $name + &quot;&#39;s&quot;)
+		]
+        
+	(if: $isMale is true)[
+		(set: $cHe to &quot;He&quot;, $che to &quot;he&quot;, $cHis to &quot;His&quot;, $chis to &quot;his&quot;, $cHim to &quot;Him&quot;, $chim to &quot;him&quot;, $cHimself to &quot;Himself&quot;,$chimself to &quot;himself&quot;, $cMale to &quot;Male&quot;, $cmale to &quot;male&quot;)
+	]
+	(else:)[
+		(set: $cHe to &quot;She&quot;, $che to &quot;she&quot;, $cHis to &quot;Her&quot;, $chis to &quot;her&quot;, $cHim to &quot;Her&quot;, $chim to &quot;her&quot;, $cHimself to &quot;Herself&quot;,$chimself to &quot;herself&quot;, $cMale to &quot;Female&quot;, $cmale to &quot;female&quot;)
+	]
+
+(if: $name is &quot;London&quot; or $name is &quot;Edmon&quot;)[
+&lt;br&gt;&quot;$name Kovenberg. I like it, maybe we&#39;ll visit there again someday.&quot; She coo&#39;ed at her child.&lt;br&gt;
+
 &quot;Alright. Well, I&#39;ll just go and get you a nice meal first, my love. And you... I&#39;ll be back for you, little (if: $isMale is true)[man](else:)[lady].&quot;&lt;br&gt;&lt;br&gt;
+
 His wife burst into laughter.&lt;br&gt;]
-(else-if: $name is &quot;Orion&quot; or $name is &quot;Tobias&quot; or $name is &quot;Aurora&quot; or $name is &quot;Jade&quot;)[&lt;br&gt;&quot;$name Kovenberg. I like it.&quot; She said, booping her child&#39;s nose.&lt;br&gt;&lt;br&gt;&quot;Well, I&#39;ll go and get you a nice meal, my love. I&#39;ll be back for you soon, though, little (if: $isMale is true)[man](else:)[lady].&quot; Your father said.&lt;br&gt;]
-(else-if: $name is &quot;Casey&quot;)[&lt;br&gt;But she didn&#39;t want her child to copy her name. So she added a little something to her baby (if: $isMale is true)[boy](else:)[girl]&#39;s name.&lt;br&gt;&lt;br&gt;&quot;$name O&#39; Kovenberg. I like it, you made a good decision. Maybe I should reward you tonight.&quot; She shot a wink at her husband.&lt;br&gt;&lt;br&gt;&quot;Oh? Well, I&#39;ll keep your word for it.&quot; He grinned, &quot;Now, let me just go and get you a nice meal from outside. I&#39;ll be back for you, my love.&quot;&lt;br&gt;]
-(else-if: $name is &quot;Cory&quot;)[&lt;br&gt;But she didn&#39;t want her child to copy her father&#39;s name entirely. So she added a little something to her baby (if: $isMale is true)[boy](else:)[girl]&#39;s name.&lt;br&gt;&lt;br&gt;&quot;$name (if: $isMale is true) [Jr.] (else:) [O&#39;] Kovenberg. I like it, (if: $isMale is true)[he](else:)[she] does remind me of you.&quot; She said with a smile as she swaddled the baby.&lt;br&gt;&lt;br&gt;&quot;Is that so? Well, I&#39;ll go and get you a nice meal, my love. I&#39;ll be back for you, little (if: $isMale is true)[man](else:)[lady].&quot; your father said.&lt;br&gt;]
+
+(else-if: $name is &quot;Orion&quot; or $name is &quot;Tobias&quot; or $name is &quot;Aurora&quot; or $name is &quot;Jade&quot;)[
+&lt;br&gt;&quot;$name Kovenberg. I like it.&quot; She said, booping her child&#39;s nose.&lt;br&gt;&lt;br&gt;
+
+&quot;Well, I&#39;ll go and get you a nice meal, my love. I&#39;ll be back for you soon, though, little (if: $isMale is true)[man](else:)[lady].&quot; Your father said.&lt;br&gt;]
+
+(else-if: $name is &quot;Casey&quot;)[
+&lt;br&gt;But she didn&#39;t want her child to copy her exact name. So she added a little something to her baby (if: $isMale is true)[boy](else:)[girl]&#39;s name.&lt;br&gt;&lt;br&gt;
+
+&quot;$name O&#39; Kovenberg. I like it, you made a good decision. Maybe I should reward you tonight.&quot; She shot a wink at her husband.
+
+&lt;br&gt;&lt;br&gt;&quot;Oh? Well, I&#39;ll keep your word for it.&quot; He grinned, &quot;Now, let me just go and get you a nice meal from outside. I&#39;ll be back for you, my love.&quot;&lt;br&gt;]
+
+(else-if: $name is &quot;Cory&quot;)[
+&lt;br&gt;But she didn&#39;t want her child to copy her father&#39;s name entirely. So she added a little something to her baby (if: $isMale is true)[boy](else:)[girl]&#39;s name.&lt;br&gt;&lt;br&gt;
+
+&quot;$name (if: $isMale is true) [Jr.] (else:) [O&#39;] Kovenberg. I like it, (if: $isMale is true)[he](else:)[she] does remind me of you.&quot; She said with a smile as she swaddled the baby.&lt;br&gt;&lt;br&gt;
+
+&quot;Is that so? Well, I&#39;ll go and get you a nice meal, my love. I&#39;ll be back for you, little (if: $isMale is true)[man](else:)[lady].&quot; your father said.&lt;br&gt;]
+
 (else:)[&quot;$name Kovenberg. I like it, reminds me of a friend.&quot; She reminisced absentmindedly. You brought her back to reality once you cried. You don&#39;t like it when people don&#39;t pay attention to you, don&#39;t you?&lt;br&gt;&lt;br&gt;&quot;I was gonna and get you a nice meal. But looks like the little (if: $isMale is true)[man] (else:)[lady] has a temper. Do you need me around for help?&quot;&lt;br&gt;&lt;br&gt;&quot;I&#39;m alright, honey. I can handle (if: $isMale is true)[him](else:)[her] just fine. I am a little hungry though.&quot; She rubbed her (if: $Csection is true)[stitched belly](else:)[aching belly], she won&#39;t be eating pizza for awhile...&lt;br&gt;]
 }
-$name Kovenberg is your name. Unless you change your legal name in the future, it will stay with you until death. This will be the name recorded in history books once you achieve fame. Are you happy with your father&#39;s choice?
+$cName Kovenberg is your name. Unless you change your legal name in the future, it will stay with you until death. This will be the name recorded in history books once you achieve fame. Are you happy with your father&#39;s choice?
 
-[[Yes.-&gt;Babyhood I: Chapter 1]] 
+(link: &quot;Yes,&quot;)[
+	(if: $isMale is true)[
+		(set: $cHe to &quot;He&quot;, $che to &quot;he&quot;, $cHis to &quot;His&quot;, $chis to &quot;his&quot;, $cHim to &quot;Him&quot;, $chim to &quot;him&quot;)
+	](else:)[
+		(set: $cHe to &quot;She&quot;, $che to &quot;she&quot;, $cHis to &quot;Her&quot;, $chis to &quot;her&quot;, $cHim to &quot;Her&quot;, $chim to &quot;her&quot;)
+	]
+	(goto: &quot;Babyhood I: Chapter 1&quot;)
+] I&#39;m happy with the name.
 
-[[No, I changed my mind.-&gt;Name Change]] </tw-passagedata><tw-passagedata pid="28" name="RelationshipMenu" tags="" position="1100,175" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
+(link: &quot;No,&quot;)[
+	(goto: &quot;Name Change&quot;)
+] I&#39;m not happy with how $cPossessive name turned out.
+
+(link: &quot;Actually,&quot;)[
+	(goto: &quot;Change Sex.&quot;)
+] I want to change $chis gender.
+</tw-passagedata><tw-passagedata pid="28" name="RelationshipMenu" tags="" position="1100,175" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
 ---
 ### Relationship Stats
 ---
@@ -1401,6 +1590,20 @@ You are... comfortable. Lucky you!
 To Be Continued.
 }</tw-passagedata><tw-passagedata pid="31" name="UpdateLOG" tags="" position="1400,175" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
 
+&#39;&#39;(05/16/2026: Greed&#39;s Interactive Novel - Consistency Arc 2.3)&#39;&#39;
+---Test 17---
+(color: &quot;grey&quot;)[
+- Updated Choice B in LearnToWalk02
+- Updated Prologue passages
+- Minor narrative fix on your first meeting with a fellow baby
+- Made some choices more impactful
+- Updated Character Menu
+- Fixed bugs in Choice A in LearnToWalk02
+- Fixed misspelled pronouns
+- Fixed bugs in pronoun system
+- Added first inheritable genetic trait: Albinism. (If chosen, Casey will become a carrier, while Cory will have the actual genetic condition.
+]
+
 ### UPDATE LOG:
 &#39;&#39;(05/15/2026: Greed&#39;s Interactive Novel - Consistency Arc 2.2)&#39;&#39;
 ---Test 16---
@@ -1774,33 +1977,37 @@ Your uncle was startled awake, but he immediately took notice of your cries so h
 &quot;Shit, shit. Uh, are you okay little (if: $isMale is true)[man](else:)[lady]? Hungry? Hold on, I&#39;ll go and get you a bottle---&quot;&lt;br&gt;
 &quot;&#39;&#39;WAHHHHHH!&#39;&#39;&quot;&lt;br&gt;
 &quot;//FUCK//---that hurt...&quot;
-(if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] opened his eyes, revealing (if: $isMale is true)[his](else:)[her] beautiful $eyes eyes where big drops of tears kept continuously falling from. (if: $isMale is true)[He](else:)[She] started to cry even more miserably, but quieter. (if: $isMale is true)[He](else:)[She] looked even more pitiful crying this way.&lt;br&gt;&lt;br&gt;
+$cName raised the lid of $chis eyes, revealing $chis beautiful $eyes irides where big drops of tears flow off like two small streams of water. $cHe cried more miserably but at a lower volume, it was heartbreaking to even look at.&lt;br&gt;&lt;br&gt;
 
-&quot;Sorry, sorry, I&#39;m not angry, I swear. I was just surprised, please don&#39;t cry, what do you want then, lil&#39; fella? Goddamnit, I&#39;m really bad with kids... No wonder Emi don&#39;t want em.&quot; He muttered to himself at the end.&lt;br&gt;&lt;br&gt;
+&quot;Sorry, sorry, I&#39;m not angry at you little one,&quot; Stephen panicked as he desperately coaxed the little babe. &quot;I was just a little startled, now please don&#39;t cry, do you wanna drink milk? Play in the mud? Goddamnit, I&#39;m really bad with kids... well there goes uncle of the year.&quot; He said in self-deprecation.&lt;br&gt;&lt;br&gt; 
 
-(if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] continued to cry before pointing to the cute plushie on the baby mobile.&lt;br&gt;&lt;br&gt;
+$cPossessive tears didn&#39;t stop as $che pointed at the cute plushie stuck on the baby mobile.&lt;br&gt;&lt;br&gt;
 
-&quot;You want...this?&quot; Stephen grabbed the plushie from the baby mobile and handed it back to the crying baby. Instantly, the tears stopped, only the sniffles remained. (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] looked up at him with gratitude, but with a hint of fear.&lt;br&gt;&lt;br&gt;
+A light bulb then went off in Stephen&#39;s head, &quot;Is this why you&#39;re crying?&quot; He grabbed the plushie stuck at the baby mobile and handed it over to the weeping babe. Instantly, the loud sobs ended, $cName wiped $chis tears and snot away with $chis tiny hands. $cName sniffled a few times before looking up at him eyes full of gratitude and uncertainty.&lt;br&gt;&lt;br&gt;
 
-&quot;Ah... so that was it. You fucking scared me. Don&#39;t do that again, aight? Crying ain&#39;t the solution for everythin. Actually, what do I know? I&#39;m dealing with a baby for pete&#39;s sake.&quot; Stephen sighed, meeting the nervous big $eyes eyes looking up at him. He glimpsed the fear in them, and his heart instantly ached.&lt;br&gt;&lt;br&gt;
+&quot;Ah... so that was the problem. Such a little thing. Yet you cried like a puppy that got weaned from its mother. It&#39;s not like it&#39;s the end of the world... but what do I know? I&#39;m dealing with a baby for Pete&#39;s sake!&quot; Stephen sighed, his gaze meeting the big $eyes eyes looking up at him. He glimpsed the slight apprehension in them, which caused him to fold in seconds.&lt;br&gt;&lt;br&gt;
 
-&quot;You... nevermind. I&#39;m sorry for yelling earlier. I wasn&#39;t being a good uncle, m&#39;kay? Forgive this old man, yeah?&quot;&lt;br&gt;&lt;br&gt;
+&quot;You... nevermind. I&#39;m sorry for scaring you earlier. Are you happy now? That&#39;s a pretty nice bear, no wonder you got so upset.&quot;&lt;br&gt;&lt;br&gt;
 
-(if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] clutched (if: $isMale is true)[his](else:)[her] plushie cautiously, but the man&#39;s voice sounded soothing enough for (if: $isMale is true)[him](else:)[her]. Hesitantly, (if: $isMale is true)[he](else:)[she] rolled over to the crib fence by Stephen&#39;s side.&lt;br&gt;&lt;br&gt;
+$cName clutched $chis plushie apprehensively, but the now gentle tone of the older man relaxed the tension off $chis little shoulders. $cHe carefully rolled over to the crib fence his uncle was at.&lt;br&gt;&lt;br&gt;
 
-&quot;Huh?&quot;&lt;br&gt;&lt;br&gt;
+&quot;Huh?&quot; Stephen moved his hands to the corners of the crib&#39;s top railing in surprise.&lt;br&gt;&lt;br&gt;
 
-Stephen widened his eyes as he watched the little babe struggle to stand up by using the crib fence. He didn&#39;t try to help whatever the babe planned on doing. But ain&#39;t this one of em---err...baby milestones? Pulling-to-stand up? That&#39;s neat. (if: $isMale is true)[He](else:)[She]&#39;s growing real fast.&lt;br&gt;&lt;br&gt;
+ His eyes widened as the little babe tries to pull itself up by holding onto the little bars of the railing. He watched with fascinated curiousity. Ain&#39;t this one of em---err...baby milestones he&#39;s been reading about in parenting books prior to babysitting his brother&#39;s kid?&lt;br&gt;&lt;br&gt;
 
-&quot;Bubba!&quot; (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] finally reached Stephen&#39;s hand on the crib fence, and gave it a hug. Consider that their little truce.&lt;br&gt;&lt;br&gt;
+&quot;Bubba!&quot; $cName shouted with delight after $che finally stood up tall enough to barely reach the top railing. He held the bar tightly as he looked up. Consider that their little truce.&lt;br&gt;&lt;br&gt;
 
-&quot;Bubba, huh? I like the sound of that. Does that mean you forgive me in your little baby language?&quot; Stephen teased the little babe, he used his free hand to ruffle (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot; and $name is not &quot;Tobias&quot;)[$name&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is true)[Junior&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name&#39;] rapidly growing $colorHair baby locks.&lt;br&gt;&lt;br&gt;
+&quot;Bubba, huh? I like the sound of that. Does that mean you forgive me in your language?&quot; Stephen teased the little babe, he raised a hand to ruffle $cName rapidly growing $colorHair baby locks. Then that hand fell back down to help the baby steady $chimself.&lt;br&gt;&lt;br&gt;
 
-&quot;Bubba!&quot; (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] repeated, but he tried to shake off the hand on his head, it irritated him.&lt;br&gt;&lt;br&gt;
+&quot;Bubba!&quot; (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] repeated, but $che tried to shake off the hand on $chis back.&lt;br&gt;&lt;br&gt;
 
-&quot;Well, I&#39;ll take that as a yes.&quot; A jovial grin plastered itself on Stephen&#39;s chiseled face. He looked way older than your father, and was really scary earlier thanks to his yelling---almost ruining your first good impression of him. But he helped you get your cute plushie back, and sounded an awful lot nicer now. You were right from the start! He&#39;s just as nice as he looks! Maybe just no more loud crying...or else he&#39;ll be real angry...&lt;br&gt;&lt;br&gt;
+&quot;Well, I&#39;ll take that as a yes.&quot; A jovial grin plastered itself on Stephen&#39;s chiseled face.&lt;br&gt;&lt;br&gt;
 
-&quot;You know what, you ain&#39;t half bad for a kid---baby, I mean. I take back what I said earlier. You&#39;re pretty good.&quot; (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] tilted his head, he had no clue what he was talking about. But it didn&#39;t matter, he at least recognised the friendly tone that sentence was laced with. He gave a simple go-to response in the end, &quot;Yah!&quot;]
+This old man looked way older than your father, and was really scary earlier thanks to his booming voice---almost ruining your first good impression of him. But he helped you get your cute plushie back, and sounded an awful lot nicer now. He really isn&#39;t all that bad! He&#39;s just as nice as his wrinkled face suggests! Perhaps as long as you&#39;re quiet, and not so loud, he won&#39;t yell like that anymore?&lt;br&gt;&lt;br&gt;
+
+//Damn, you make him sound really bad off context.//&lt;br&gt;&lt;br&gt;
+
+Stephen continued, &quot;You know what, you ain&#39;t half bad for a kid---baby, I mean. You&#39;re pretty sweet.&quot; $cName tilted his head, $che wasn&#39;t proficient enough in the language to understand. But it didn&#39;t matter, $che recognised the friendly tone of his uncle&#39;s voice. So $cHe gave a simple response that always worked for $chim, &quot;Yah!&quot;]
 
 &lt;!--MODERNN--&gt;
 
@@ -1937,29 +2144,6 @@ To Be Continued
 		(goto: &quot;Inventory&quot;)
 	]
     
-    		(set: $cName to $name)
-		(if: $name is &quot;Cory&quot; and $isMale is true)[
-			(set: $cName to $name + &quot; Junior&quot;)
-			(set: $cPossessive to &quot;Junior&#39;s&quot;)
-		]
-		(else-if: $name is &quot;Cory&quot; or $name is &quot;Casey&quot;)[
-			(set: $cName to $name + &quot; O&#39;&quot;)
-			(set: $cPossessive to $cName + &quot;&#39;s&quot;)
-		]
-		(else-if: $name is &quot;Tobias&quot;)[
-			(set: $cPossessive to $name + &quot;&#39;&quot;)
-		]
-		(else:)[
-			(set: $cPossessive to $name + &quot;&#39;s&quot;)
-		]
-
-	(if: $isMale is true)[
-		(set: $cHe to &quot;He&quot;, $che to &quot;he&quot;, $cHis to &quot;His&quot;, $chis to &quot;his&quot;, $cHim to &quot;Him&quot;, $chim to &quot;him&quot;)
-	]
-	(else:)[
-		(set: $cHe to &quot;She&quot;, $che to &quot;she&quot;, $cHis to &quot;Her&quot;, $chis to &quot;her&quot;, $cHim to &quot;Her&quot;, $chim to &quot;her&quot;)
-	]
-    
 }
 ---
 {
@@ -2077,7 +2261,7 @@ To Be Continued
     
 	Push and---&quot;Hahh!&quot; You sigh in relief before turning your body to the other end of your crib. You turn your head and grab one of the little bars.&lt;br&gt;&lt;br&gt;
 	//==Skill Check!==//&lt;br&gt;
-	(if: $Str is &gt; 10)[//==Skill Check (color: &quot;green&quot;)[SUCCESS]!==//&lt;br&gt;&lt;br&gt;Thanks to all that strength you&#39;ve been building up, you successfully pull yourself up with ease.&lt;br&gt;&lt;br&gt;](else:)[//==Skill Check (color: &quot;red&quot;)[FAILURE]!==//&lt;br&gt;&lt;br&gt;A little more huffs and puffs then you successfully grab hold of the bar and pulled yourself up with much difficulty.&lt;br&gt;&lt;br&gt;
+	(if: $Str is &gt; 10)[//==Skill Check (color: &quot;green&quot;)[SUCCESS]!==//&lt;br&gt;&lt;br&gt;Thanks to all that strength you&#39;ve been building up, you successfully pull yourself up with ease.&lt;br&gt;&lt;br&gt;](else:)[//==Skill Check (color: &quot;red&quot;)[FAILURE]!==//&lt;br&gt;&lt;br&gt;A little more huffs and puffs then you successfully grab hold of the bar and pulled yourself up with much difficulty.&lt;br&gt;&lt;br&gt;]
 
 &lt;!--TIMELINE BRANCHES--&gt;
 
@@ -2157,7 +2341,6 @@ To Be Continued
 &lt;br&gt;
 ---
 (color: &quot;yellow&quot;)[&lt;br&gt;Congratulations! With a strong body, and clever mind, you were able to successfully retrieve your cute plushie back securely! And you did it without disturbing your (if: $setting is &quot;2040s&quot;)[father&#39;s conversation with the door.](else:)[babysitter&#39;s sleep---at least at first.]&lt;br&gt;&lt;br&gt;Truly a model exemplery of a good child! You are definitely going to regale your cute plushie with the details of your rescue plans later, and watch their beady eyes widen at your sheer awesomeness.]
-]
 ]
 
 (if: (history:) does not contain (passage:)&#39;s name)[
@@ -2292,7 +2475,7 @@ To Be Continued
 	]
 (if: $socialTrick02 is false)[
 ---
-(color: &quot;yellow&quot;)[Hint:] (color: &quot;grey&quot;)[Greyed out choices require certain conditions to be unlocked.]](else:)[]
+(color: &quot;yellow&quot;)[Hint:] (color: &quot;grey&quot;)[Some greyed out choices require certain conditions to be unlocked.]](else:)[]
 }
 ---
 {
@@ -2511,7 +2694,6 @@ Oh, what to do...
     (else:)[
     	&quot;(color: &quot;grey&quot;)[Babi...Babi!]&quot;
     ]}
-    
     ---
     
     
@@ -3010,7 +3192,7 @@ kartkid123.5@gmail.com/kartkid404
 }
 (checkbox: bind $agreed, &quot;I agree to the terms and conditions.&quot;)
 
-(link: &quot;Proceed&quot;)[
+(link: &quot;Proceed &gt;&gt;&gt;&quot;)[
     (if: $agreed)[
         (go-to: &quot;Life_&quot;)
     ]
