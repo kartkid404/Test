@@ -394,9 +394,9 @@ Though you took on your father&#39;s looks for the most part, you inherited one 
 (link-reveal-goto: &quot;...voluminous ginger tresses,&quot;,&quot;Movement&quot;)[(set: $colorHair to &quot;ginger&quot;)(set: $Rel_Dad to it+5)] (if: $isMale is true)[just as red as the toy racecar your father bought you. Speaking of, where did it go?](else:)[just as red as the dress of the toy doll your father bought you. Speaking of, where did it go?]
 }</tw-passagedata><tw-passagedata pid="14" name="Movement" tags="" position="1125,300" size="100,100">{
 (set: $babyhood to true)
-$name groggily woke up, (if: $isMale is true)[his](else:)[her] big $eyes eyes fluttering open. (if: $isMale is true)[He](else:)[She] just woke up from another long nap when (if: $isMale is true)[he](else:)[she] noticed that the place (if: $isMale is true)[his](else:)[her] mother is usually at was empty.}
+$cName groggily woke up, $chis big $eyes eyes fluttering open. $cHe just woke up from another long nap when $che noticed that the place $chis mother is usually at was empty.}
 
-What should (if: $isMale is true)[he](else:)[she] do?
+What should $che do?
  
 (link-reveal-goto: &quot;Roll over.&quot;,&quot;Achievement01&quot;)[(set: $Str to it+2)(set: $End to it+2)(set: $Trick01 to true)]
 (link-reveal-goto: &quot;Sit Up.&quot;,&quot;Achievement01&quot;) [(set: $Str to it+4)(set: $Trick02 to true)] 
@@ -433,9 +433,9 @@ Congratulations, you unlocked the character menu! Would you like to check it out
 	]
 }
 ---
-$name sat in a stroller as (if: $isMale is true)[his](else:)[her] father walked leisurely to almost every aisle, $name&#39;s mother was on a shopping spree again. Only this time, $name got to accompany them. $name was sitting on (if: $isMale is true)[his](else:)[her] little baby carriage, looking out in wonder. Suddenly, (if: $isMale is true)[he](else:)[she] saw... a tiny person!&lt;br&gt;&lt;br&gt;That tiny person got even closer, until the two made eye contact.
+$cName sat in a stroller as $chis father walked leisurely to almost every aisle, $cPossessive mother was on a shopping spree again. Only this time, $cName got to accompany them. $cName was sitting on $chis little baby carriage, looking out in wonder. Suddenly, $che saw... a tiny person!&lt;br&gt;&lt;br&gt;That tiny person got even closer, until the two made eye contact.
 
-What should (if: $isMale is true)[he](else:)[she] do?
+What should $che do?
 
 (link-reveal-goto: &quot;Smile at the tiny person.&quot;,&quot;FreePlushie&quot;)[(set: $Cha to it+4)(set: $socialTrick01 to true)] It&#39;s always a good idea to bring out your best smile when you wanna make friends!
 
@@ -867,14 +867,14 @@ But... nothing lasts forever. Your comforting home felt too tight one day, and t
 	]
 
 (if: $name is &quot;London&quot; or $name is &quot;Edmon&quot;)[
-&lt;br&gt;&quot;$name Kovenberg. I like it, maybe we&#39;ll visit there again someday.&quot; She coo&#39;ed at her child.&lt;br&gt;
+&lt;br&gt;&quot;$cName Kovenberg. I like it, maybe we&#39;ll visit there again someday.&quot; She coo&#39;ed at her child.&lt;br&gt;
 
 &quot;Alright. Well, I&#39;ll just go and get you a nice meal first, my love. And you... I&#39;ll be back for you, little (if: $isMale is true)[man](else:)[lady].&quot;&lt;br&gt;&lt;br&gt;
 
 His wife burst into laughter.&lt;br&gt;]
 
 (else-if: $name is &quot;Orion&quot; or $name is &quot;Tobias&quot; or $name is &quot;Aurora&quot; or $name is &quot;Jade&quot;)[
-&lt;br&gt;&quot;$name Kovenberg. I like it.&quot; She said, booping her child&#39;s nose.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&quot;$cName Kovenberg. I like it.&quot; She said, booping her child&#39;s nose.&lt;br&gt;&lt;br&gt;
 
 &quot;Well, I&#39;ll go and get you a nice meal, my love. I&#39;ll be back for you soon, though, little (if: $isMale is true)[man](else:)[lady].&quot; Your father said.&lt;br&gt;]
 
@@ -888,11 +888,15 @@ His wife burst into laughter.&lt;br&gt;]
 (else-if: $name is &quot;Cory&quot;)[
 &lt;br&gt;But she didn&#39;t want her child to copy her father&#39;s name entirely. So she added a little something to her baby (if: $isMale is true)[boy](else:)[girl]&#39;s name.&lt;br&gt;&lt;br&gt;
 
-&quot;$name (if: $isMale is true) [Jr.] (else:) [O&#39;] Kovenberg. I like it, (if: $isMale is true)[he](else:)[she] does remind me of you.&quot; She said with a smile as she swaddled the baby.&lt;br&gt;&lt;br&gt;
+&quot;$cName Kovenberg. I like it, $che does remind me of you.&quot; She said with a smile as she swaddled the baby.&lt;br&gt;&lt;br&gt;
 
 &quot;Is that so? Well, I&#39;ll go and get you a nice meal, my love. I&#39;ll be back for you, little (if: $isMale is true)[man](else:)[lady].&quot; your father said.&lt;br&gt;]
 
-(else:)[&quot;$name Kovenberg. I like it, reminds me of a friend.&quot; She reminisced absentmindedly. You brought her back to reality once you cried. You don&#39;t like it when people don&#39;t pay attention to you, don&#39;t you?&lt;br&gt;&lt;br&gt;&quot;I was gonna and get you a nice meal. But looks like the little (if: $isMale is true)[man] (else:)[lady] has a temper. Do you need me around for help?&quot;&lt;br&gt;&lt;br&gt;&quot;I&#39;m alright, honey. I can handle (if: $isMale is true)[him](else:)[her] just fine. I am a little hungry though.&quot; She rubbed her (if: $Csection is true)[stitched belly](else:)[aching belly], she won&#39;t be eating pizza for awhile...&lt;br&gt;]
+(else:)[&quot;$name Kovenberg. I like it, reminds me of a friend.&quot; She reminisced absentmindedly. You brought her back to reality once you cried. You don&#39;t like it when people don&#39;t pay attention to you, don&#39;t you?&lt;br&gt;&lt;br&gt;
+
+&quot;I was gonna and get you a nice meal. But looks like the little (if: $isMale is true)[man] (else:)[lady] has a temper. Do you need me around for help?&quot;&lt;br&gt;&lt;br&gt;
+
+&quot;I&#39;m alright, honey. I can handle $chim just fine. I am a little hungry though.&quot; She rubbed her (if: $Csection is true)[stitched belly](else:)[aching belly], she won&#39;t be eating pizza for awhile...&lt;br&gt;]
 }
 $cName Kovenberg is your name. Unless you change your legal name in the future, it will stay with you until death. This will be the name recorded in history books once you achieve fame. Are you happy with your father&#39;s choice?
 
@@ -1590,6 +1594,8 @@ You are... comfortable. Lucky you!
 To Be Continued.
 }</tw-passagedata><tw-passagedata pid="31" name="UpdateLOG" tags="" position="1400,175" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
 
+### UPDATE LOG:
+---
 &#39;&#39;(05/16/2026: Greed&#39;s Interactive Novel - Consistency Arc 2.3)&#39;&#39;
 ---Test 17---
 (color: &quot;grey&quot;)[
@@ -1601,10 +1607,8 @@ To Be Continued.
 - Fixed bugs in Choice A in LearnToWalk02
 - Fixed misspelled pronouns
 - Fixed bugs in pronoun system
-- Added first inheritable genetic trait: Albinism. (If chosen, Casey will become a carrier, while Cory will have the actual genetic condition.
+- Added first inheritable genetic trait: Albinism. (If chosen, Casey is the parent carrier, while Cory will have the actual genetic condition leading you to inherit this skin type.)
 ]
-
-### UPDATE LOG:
 &#39;&#39;(05/15/2026: Greed&#39;s Interactive Novel - Consistency Arc 2.2)&#39;&#39;
 ---Test 16---
 (color: &quot;grey&quot;)[
@@ -2486,9 +2490,9 @@ To Be Continued
 (set: $DaddyVisit to true)
 &quot;Oh, hey baby... sorry, did I wake you?&quot;&lt;br&gt;&lt;br&gt;
 
-(if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] woke up from (if: $isMale is true)[his](else:)[her] deep nap with groggy, and puffy eyes. (if: $isMale is true)[He](else:)[She] felt a thumb touch the sides of (if: $isMale is true)[his](else:)[her] eyes, so (if: $isMale is true)[he](else:)[she] turned (if: $isMale is true)[his](else:)[her] head to the culprit&#39;s direction. &quot;Ga...&quot; (if: $isMale is true)[He](else:)[She] coo&#39;ed, earning a small smile from Cory&#39;s face. &quot;Had a nice dream, huh?&quot; (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] responded by grabbing the thumb on (if: $isMale is true)[his](else:)[her] face, pushing it away. &quot;Aah!&quot; (if: $isMale is true)[He](else:)[She] squealed---or yawned for a better word, before stretching (if: $isMale is true)[his](else:)[her] tiny limbs.&lt;br&gt;&lt;br&gt;
+$cName woke up from $chis deep nap with groggy, and puffy eyes. $cHe felt a thumb touch the sides of $chis eyes, so $che turned $chis head to the culprit&#39;s direction. &quot;Ga...&quot; $cHe coo&#39;ed, earning a small smile from Cory&#39;s face. &quot;Had a nice dream, huh?&quot; He asked. $cName responded by pushing the thumb off of $chis face. $cHe  then squealed---&quot;Haah!&quot;---or yawned for a better word, stretching $chis tiny limbs.&lt;br&gt;&lt;br&gt;
 
-&quot;Well you aren&#39;t crying, so that&#39;s good news...&quot; He sighed in relief. &quot;Daddy had a long day at work today... and so did your mommy from doing all the household chores.&quot; He whispered softly, after all, it was dark out. He didn&#39;t wanna make too much noise. Meanwhile (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] delightfully coo&#39;ed in response. &quot;Yah!&quot;&lt;br&gt;&lt;br&gt;
+&quot;Well you don&#39;t seem too disturbed by me, so that&#39;s good news...&quot; Cory sighed in relief. &quot;Daddy had a long day at work today... and so did your mommy from doing all the household chores.&quot; He whispered softly, after all, it was dark out. He didn&#39;t wanna make too much noise. Meanwhile (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] delightfully coo&#39;ed in response. &quot;Yah!&quot;&lt;br&gt;&lt;br&gt;
 
 &quot;You think so too, (if: $isMale is true)[bud](else:)[sweetheart]?&quot;&lt;br&gt;
 &quot;Ah!&quot;&lt;br&gt;
