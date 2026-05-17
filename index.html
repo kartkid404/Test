@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Test1.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Test1" startnode="52" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="6D0F50FE-996D-4DA1-933A-BBBB552B6151" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Life_" tags="" position="75,475" size="100,100">Life is a beautiful thing.
+<tw-storydata name="Test1" startnode="52" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="6D0F50FE-996D-4DA1-933A-BBBB552B6151" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Life_" tags="" position="75,525" size="100,100">Life is a beautiful thing.
 
 It can be molded as the most hauntingly terrifying experience, or the most beautiful, and memorable journey.  Where every choice you make, and every belief you acquire, shapes your story.
 
@@ -108,7 +108,7 @@ But we all begin from the same humble beginning...
 (set: $foundIT to false)
 
 (set: $babyhood to false)
-(set: $babyEvents to (a: &quot;LearnToWalk01&quot;, &quot;Language01&quot;))
+(set: $babyEvents to (a: &quot;LearnToWalk01&quot;, &quot;Language01&quot;,&quot;RandomEvent01&quot;))
 
 (set: $childhood to false)
 (set: $teenagehood to false)
@@ -184,7 +184,7 @@ Your mother didn&#39;t react, presumably having lost consciousness at some point
 &quot;(link: &quot;...Cory,&quot;)[(set: $name to &quot;Cory&quot;)(go-to: &quot;The Name&quot;)] after me.&quot;
 &quot;(link: &quot;...Aurora.&quot;)[(set: $name to &quot;Aurora&quot;)(go-to: &quot;The Name&quot;)]&quot;
 &quot;(link: &quot;...Jade.&quot;)[(set: $name to &quot;Jade&quot;)(go-to: &quot;The Name&quot;)]&quot;
-&quot;(link: &quot;...Alex.&quot;)[(set: $name to &quot;Alex&quot;)(go-to: &quot;The Name&quot;)]&quot;</tw-passagedata><tw-passagedata pid="5" name="Babyhood I: Chapter 1" tags="" position="650,275" size="100,100">Casey and Cory left the hospital just a few days later. Casey needed a lot of rest, so Cory did most of the work. Thankfully, their new little babe seems to be quite peaceful, sleeping throughout the car ride back to home in a little swaddle on the baby carriage strapped to their trusty (if: $setting is &quot;1960s&quot;)[1950s Ford Fairlane](else-if: $setting is &quot;2000s&quot;)[1990s Honda Civic](else:)[2030s Hyundai Custin].
+&quot;(link: &quot;...Alex.&quot;)[(set: $name to &quot;Alex&quot;)(go-to: &quot;The Name&quot;)]&quot;</tw-passagedata><tw-passagedata pid="5" name="Babyhood I: Chapter 1" tags="" position="775,400" size="100,100">Casey and Cory left the hospital just a few days later. Casey needed a lot of rest, so Cory did most of the work. Thankfully, their new little babe seems to be quite peaceful, sleeping throughout the car ride back to home in a little swaddle on the baby carriage strapped to their trusty (if: $setting is &quot;1960s&quot;)[1950s Ford Fairlane](else-if: $setting is &quot;2000s&quot;)[1990s Honda Civic](else:)[2030s Hyundai Custin].
 
 It will be sometime before the relatives visit, not that Cory wanted them over as soon as the baby was born. He wanted $cName to get familiar with $chis parents first.
 ---
@@ -194,7 +194,7 @@ You didn&#39;t understand what was so familiar about it, so you just didn&#39;t 
 
 (link: &quot;Next &gt;&gt;&gt;&quot;)[
 	(goto: &quot;Zzz...Zzz...&quot;)
-]</tw-passagedata><tw-passagedata pid="6" name="Name Change" tags="" position="725,525" size="100,100">{(if: $isMale is true)[&quot;...Just as we planned, we will name you...&quot;&lt;br&gt;
+]</tw-passagedata><tw-passagedata pid="6" name="Name Change" tags="" position="675,475" size="100,100">{(if: $isMale is true)[&quot;...Just as we planned, we will name you...&quot;&lt;br&gt;
 ---
 &quot;(link: &quot;...London,&quot;)[
 (set: $name to &quot;London&quot;)
@@ -256,7 +256,7 @@ You didn&#39;t understand what was so familiar about it, so you just didn&#39;t 
 (set: $name to &quot;Alex&quot;)
 (go-to: &quot;The Name&quot;)]&quot;]
 }
----</tw-passagedata><tw-passagedata pid="7" name="Change Sex." tags="" position="575,525" size="100,100">{
+---</tw-passagedata><tw-passagedata pid="7" name="Change Sex." tags="" position="575,475" size="100,100">{
 ---
 (set: $ChangeSex to it+1)
 (if: $isMale is true)[
@@ -282,7 +282,7 @@ The Kovenberg couple laughed and forgave the doctor. They understood that profes
 
 (color: &quot;grey&quot;)[Author&#39;s Note: Names need to match the gender of your character for narrative purposes. But let me know if you want names to be more flexible and not restricted by sex or gender in future updates.]
 
-}</tw-passagedata><tw-passagedata pid="8" name="Zzz...Zzz..." tags="" position="725,400" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="8" name="Zzz...Zzz..." tags="" position="675,325" size="100,100">{
 (set: $trait to &quot;Albinism&quot;)
 $cName finally grew out of $chis reddish, almost raisin-like appearance that only parents could love. $cHe inherited most of $chis father&#39;s looks, like his skin which was...&lt;br&gt;&lt;br&gt;
 
@@ -305,7 +305,7 @@ $cName finally grew out of $chis reddish, almost raisin-like appearance that onl
 	(set: $skin to &quot;tan&quot;)] a sun-kissed complexion that looks best in summer.&lt;br&gt;&lt;br&gt;
     
 (link-reveal-goto: &quot;Ebony,&quot;, &quot;Eyes&quot;)[
-	(set: $skin to &quot;ebony&quot;)] dark skin that is rich in collagen and keeps you looking like you&#39;re twenty in your forties.&lt;br&gt;&lt;br&gt;
+	(set: $skin to &quot;dark&quot;)] dark skin that is rich in collagen and keeps you looking like you&#39;re twenty in your forties.&lt;br&gt;&lt;br&gt;
 }</tw-passagedata><tw-passagedata pid="9" name="Eyes" tags="" position="900,300" size="100,100">{
 (if: $albinism is true)[
 ---
@@ -443,7 +443,7 @@ What should $che do?
 
 (link-reveal-goto: &quot;Wave at the tiny person.&quot;,&quot;FreePlushie&quot;)[(set: $Cha to it+2)(set: $Str to it+2)] Looking at your hands always makes you happy(color:&quot;grey&quot;)[(especially if you lick them!)], maybe if you show your hands to this tiny person, they&#39;ll become your friend?
 
-(link-reveal-goto: &quot;Cry at the tiny person.&quot;,&quot;FreePlushie&quot;)[(set: $Intel to it+2)(set: $Cha to it-2)] You always got your mom and dad&#39;s attention this way, it will definitely work on the tiny person too!</tw-passagedata><tw-passagedata pid="17" name="CharacterMenu" tags="" position="900,175" size="100,100">---
+(link-reveal-goto: &quot;Cry at the tiny person.&quot;,&quot;FreePlushie&quot;)[(set: $Intel to it+2)(set: $Cha to it-2)] You always got your mom and dad&#39;s attention this way, it will definitely work on the tiny person too!</tw-passagedata><tw-passagedata pid="17" name="CharacterMenu" tags="" position="225,25" size="100,100">---
 {
 
 (link-reveal-goto:&quot;[Check Inventory]&quot;,&quot;Inventory&quot;)[]|(link-reveal-goto:&quot;[Check Relationships]&quot;,&quot;RelationshipMenu&quot;)[(color: &quot;grey&quot;)[(Contains Spoilers)]]|(link-reveal-goto:&quot;[Check Skills]&quot;,&quot;SkillsMenu&quot;)[]|(link-reveal-goto:&quot;[Check Background]&quot;,&quot;BackgroundMenu&quot;)[]|(link-reveal-goto:&quot;[Logbook]&quot;,&quot;UpdateLOG&quot;)[]|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
@@ -714,7 +714,7 @@ They seemed to want something from you. But you didn&#39;t know what yet. Howeve
 (link: &quot;Roll Over.&quot;)[(set: $SillyGoose to true)(set: $Rel_Mom to it+1)(set: $Rel_Dad to it+1)(set: $E_I to it+5)(set: $Str to it+1)(set: $Intel to it+1)(go-to: &quot;Achievement02&quot;)](if: $Trick01 is true)[(set: $T_F to it+5) You don&#39;t know what they want, but they&#39;ll surely be impressed by this trick you learned at the crib!](else:)[(set: $N_S to it+5) You don&#39;t really understand, so you decide to lay back down and turn your back to them.]
 
 (link: &quot;Cry.&quot;)[(set: $Rel_Mom to it-1)(set: $Rel_Dad to it-1)(set: $E_I to it-5)(set: $T_F to it+5)(set: $Intel to it+5)(set: $Cha to it-1)(go-to: &quot;BlunderMoment01&quot;)] A true and tried method. Though, probably not what your parents wanted.
-</tw-passagedata><tw-passagedata pid="21" name="Inventory" tags="" position="1000,175" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
+</tw-passagedata><tw-passagedata pid="21" name="Inventory" tags="" position="325,25" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
 ---
 ### List of Items:
 (if: $inventory&#39;s length is 0)[You own NOTHING.](else-if: $age is &gt; 18 and $inventory&#39;s length is 0)[You still own NOTHING, you poor bastard! What have your parents done to deserve this?!](else:)[(set: _count to 1)(for: each _item, ...$inventory)[_count. _item (set: _count to it+1)]]
@@ -840,7 +840,7 @@ But... nothing lasts forever. Your comforting home felt too tight one day, and t
 (link: &quot;Curious.&quot;)[(set: $Courage to it+2)(set: $Csection to false)(set: $birth to &quot;EasyBirth&quot;)(set: $Rel_Mom to it+3)(if: $FirstKick is false)[(set: $Rel_Dad to it+5)](else:)[](go-to: &quot;Birth&quot;)] You move towards that wonderful airy breeze.
 
 (color: &quot;yellow&quot;)[WARNING:](color: &quot;grey&quot;)[ This will be your first major choice that will leave a heavy impact on your characters future.&lt;br&gt;&lt;br&gt;It will influence their storyline to a significant extent, as well as their personality, and other people&#39;s attitude towards them. You will encounter seemingly insignificant choices like these in the future, but there will be no warning unlike now. Remember...](color: &quot;red&quot;)[ EVERY ](color: &quot;grey&quot;)[choice matters.]
-</tw-passagedata><tw-passagedata pid="27" name="The Name" tags="" position="575,400" size="100,100">When your mother woke up, she felt that her husband read her mind. Seeing your cute little face, she agreed that you suited the name.
+</tw-passagedata><tw-passagedata pid="27" name="The Name" tags="" position="575,325" size="100,100">When your mother woke up, she felt that her husband read her mind. Seeing your cute little face, she agreed that you suited the name.
 {
 
 		(set: $cName to $name)
@@ -860,10 +860,10 @@ But... nothing lasts forever. Your comforting home felt too tight one day, and t
 		]
         
 	(if: $isMale is true)[
-		(set: $cHe to &quot;He&quot;, $che to &quot;he&quot;, $cHis to &quot;His&quot;, $chis to &quot;his&quot;, $cHim to &quot;Him&quot;, $chim to &quot;him&quot;, $cHimself to &quot;Himself&quot;,$chimself to &quot;himself&quot;, $cMale to &quot;Male&quot;, $cmale to &quot;male&quot;)
+		(set: $cHe to &quot;He&quot;, $che to &quot;he&quot;, $cHis to &quot;His&quot;, $chis to &quot;his&quot;, $cHim to &quot;Him&quot;, $chim to &quot;him&quot;, $cHimself to &quot;Himself&quot;,$chimself to &quot;himself&quot;, $cMale to &quot;Male&quot;, $cmale to &quot;male&quot;, $cBoy to &quot;boy&quot;, $cboy to &quot;boy&quot;, $cSon to &quot;Son&quot;, $cson to &quot;son&quot;)
 	]
 	(else:)[
-		(set: $cHe to &quot;She&quot;, $che to &quot;she&quot;, $cHis to &quot;Her&quot;, $chis to &quot;her&quot;, $cHim to &quot;Her&quot;, $chim to &quot;her&quot;, $cHimself to &quot;Herself&quot;,$chimself to &quot;herself&quot;, $cMale to &quot;Female&quot;, $cmale to &quot;female&quot;)
+		(set: $cHe to &quot;She&quot;, $che to &quot;she&quot;, $cHis to &quot;Her&quot;, $chis to &quot;her&quot;, $cHim to &quot;Her&quot;, $chim to &quot;her&quot;, $cHimself to &quot;Herself&quot;,$chimself to &quot;herself&quot;, $cMale to &quot;Female&quot;, $cmale to &quot;female&quot;, $cBoy to &quot;Girl&quot;, $cboy to &quot;girl&quot;, $cSon to &quot;Daughter&quot;, $cson to &quot;daughter&quot;)
 	]
 
 (if: $name is &quot;London&quot; or $name is &quot;Edmon&quot;)[
@@ -916,7 +916,7 @@ $cName Kovenberg is your name. Unless you change your legal name in the future, 
 (link: &quot;Actually,&quot;)[
 	(goto: &quot;Change Sex.&quot;)
 ] I want to change $chis gender.
-</tw-passagedata><tw-passagedata pid="28" name="RelationshipMenu" tags="" position="1100,175" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
+</tw-passagedata><tw-passagedata pid="28" name="RelationshipMenu" tags="" position="425,25" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
 ---
 ### Relationship Stats
 ---
@@ -1519,7 +1519,7 @@ Sunday McKennedy: $Rel_Sunday
 	- Spouse: N/A
 	- Occupation: (if: $setting is &quot;2000s&quot;)[Babysitter](else:)[Sculptor]
 ](else:)[To Be Continued]
-}</tw-passagedata><tw-passagedata pid="29" name="SkillsMenu" tags="" position="1200,175" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
+}</tw-passagedata><tw-passagedata pid="29" name="SkillsMenu" tags="" position="525,25" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
 ---
 ### Special Skills &amp; Regular Skills
 ---
@@ -1540,7 +1540,7 @@ Sunday McKennedy: $Rel_Sunday
 
 (if: $socialTrick02 is true)[- Coo. (color:&quot;gray&quot;)[(+2 Cha, +2 Intel)]&lt;br&gt;]
 (else:)[- ???&lt;br&gt;]
-}</tw-passagedata><tw-passagedata pid="30" name="BackgroundMenu" tags="" position="1300,175" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
+}</tw-passagedata><tw-passagedata pid="30" name="BackgroundMenu" tags="" position="625,25" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
 ---
 ### Background
 ---
@@ -1592,10 +1592,22 @@ Rebelliousness: $Rebel&lt;br&gt;&lt;br&gt;
 You are... comfortable. Lucky you!
 &lt;br&gt;
 To Be Continued.
-}</tw-passagedata><tw-passagedata pid="31" name="UpdateLOG" tags="" position="1400,175" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
+}</tw-passagedata><tw-passagedata pid="31" name="UpdateLOG" tags="" position="725,25" size="100,100">(link-goto: &quot;[Character Menu]&quot;, &quot;CharacterMenu&quot;)|(link-goto: &quot;[Return to Game]&quot;, $returnTo)
 
 ### UPDATE LOG:
 ---
+&#39;&#39;(05/17/2026: Greed&#39;s Interactive Novel - Consistency Arc 2.3)&#39;&#39;
+---Test 18---
+(color: &quot;grey&quot;)[
+- Updated Choice A, and B with bug fixes, and slight revisions to the narrative
+- Fixed Pronouns issues in Choice B
+- Reduced unnecessarily long code in random passages to improve performance
+- Added all outcomes for Choice C
+- Updated third stage of the Learn To Walk series.
+- Starting a Random Event series (still incomplete)
+- Added a DISCLAIMER
+]
+
 &#39;&#39;(05/16/2026: Greed&#39;s Interactive Novel - Consistency Arc 2.3)&#39;&#39;
 ---Test 17---
 (color: &quot;grey&quot;)[
@@ -1609,6 +1621,7 @@ To Be Continued.
 - Fixed bugs in pronoun system
 - Added first inheritable genetic trait: Albinism. (If chosen, Casey is the parent carrier, while Cory will have the actual genetic condition leading you to inherit this skin type.)
 ]
+
 &#39;&#39;(05/15/2026: Greed&#39;s Interactive Novel - Consistency Arc 2.2)&#39;&#39;
 ---Test 16---
 (color: &quot;grey&quot;)[
@@ -1645,7 +1658,7 @@ At the moment, this is solely a passion project, and I do not intend on monetizi
 &#39;&#39;(04/16/2026: Greed&#39;s Interactive Novel - Consistency Arc 1.5)&#39;&#39;
 --- Test 14 ---
 (color: &quot;grey&quot;)[
-- Updated &#39;&#39;Biography&#39;&#39; in Background Menu.
+- Updated &#39;&#39;Biography&#39;&#39; in Background Menu
 - Language Series Update
 ]
 
@@ -1674,7 +1687,8 @@ At the moment, this is solely a passion project, and I do not intend on monetizi
 - Patched Incorrect Information Displayed in the Character Attributes of the Movement Passage
 - Added a Logbook
 - Created a mostly empty, but complete passage stages for the LearnToWalk series.
-- Created a Toddler Arc passage after the end of Babyhood Arc.]
+- Created a Toddler Arc passage after the end of Babyhood Arc.
+]
 
 &#39;&#39;(04/02/2026: Greed&#39;s Interactive Novel - Consistency Arc 1.2)&#39;&#39;
 --- Test 11 ---
@@ -1688,34 +1702,40 @@ b) Sexuality
 - Sexuality Update: Your character now has a randomly generated orientation. But you are free to change it over the course of your character&#39;s lifespan(Will be available in future updates). It includes the following orientations: Heterosexual, Bisexual, Homosexual, Asexual | Heteroromantic, Biromantic, Homoromantic, Aromantic.
 - Updated Relationship Type to be Dynamic with Romanceable OCs.
 - Three New Household Members: Pepper, Miss Pots, and Sonny.
-- Added more content to Babyhood Arc.]
+- Added more content to Babyhood Arc.
+]
 
 &#39;&#39;(03/31/2026: Greed&#39;s Interactive Novel - Consistency Arc 1.1)&#39;&#39;
 --- Test 10 ---
-(color: &quot;grey&quot;)[- Fixed name passages to only one passage for more space.
-- Improved MBTI Personality System.
-- Improved Special Traits and Skills System, with more traits and skills.
+(color: &quot;grey&quot;)[
+- Fixed name passages to only one passage for more space
+- Improved MBTI Personality System
+- Improved Special Traits and Skills System, with more traits and skills
 - Added more content to Prologue and Babyhood Arc
-- Improved and Patched Bugs in the Name and Change Sex passages.
+- Improved and Patched Bugs in the Name and Change Sex passages
 - Patched a minor bug and added more content in Judgement Passage
-- Added &#39;Courage&#39; to attributes]
+- Added &#39;Courage&#39; to attributes
+]
 
 &#39;&#39;(03/30/2026: Greed&#39;s Interactive Novel - Motivation&#39;s Comeback)&#39;&#39;
 --- Test 06 to Test 09  ---
-(color: &quot;grey&quot;)[- Added new content in the Prologue &amp; Babyhood Arc.
+(color: &quot;grey&quot;)[
+- Added new content in the Prologue &amp; Babyhood Arc
 - Improved Inventory System, and Reward System (Very Rough ATM)
 - Developed the Character Menu further to contain Special Traits and Skills
-- Added Unnecessary but VERY NECESSARY attribute/personality/popularity/all kinds of variable increase or decrease for (ALMOST) every choice.
+- Added Unnecessary but VERY NECESSARY attribute/personality/popularity/all kinds of variable increase or decrease for (ALMOST) every choice
 - Patched Personality Bug
 - Patched Sex(not the intercourse kind) Bug
 - Patched Unlimited Cute Plushie Bug
 - Patched Reset System Bug
 - Patched Parent Details
-- Patched &#39;Return to Game&#39; Inescapable Character Menu and Inventory Bug]
+- Patched &#39;Return to Game&#39; Inescapable Character Menu and Inventory Bug
+]
 
 &#39;&#39;(03/24/2026: Greed&#39;s Interactive Novel - The Day of Enlightenment)&#39;&#39;
 --- Test 01 to Test 05 ---
-(color: &quot;grey&quot;)[- Creation of Greed&#39;s Interactive Novel
+(color: &quot;grey&quot;)[
+- Creation of Greed&#39;s Interactive Novel
 - Created the Prologue.
 - Change Name &amp; Change Sex Passage Update
 - Appearance and Popularity Update
@@ -1730,7 +1750,8 @@ b) Sexuality
 - Character Menu Patch
 - Created the Inventory
 - Created the Babyhood Arc
-- Reset Option Update]
+- Reset Option Update
+]
 </tw-passagedata><tw-passagedata pid="32" name="LearnToWalk02" tags="" position="1575,400" size="100,100">{
 (if: $inventory contains &quot;Cute Plushie&quot;)[(set: $inventory to it - (a: &quot;Cute Plushie&quot;))]
 (else:)[(set: $foundIT to true)]
@@ -1827,26 +1848,37 @@ Whatever, you don&#39;t care about him. You can take care of your own problems! 
 		(set: $returnTo to (passage:)&#39;s name)
 		(goto: &quot;Inventory&quot;)
 	]
-}
 ---
-LearnToWalk03
-To Be Continued
+Your parents left the room after a fit of giggles, leaving you alone to yourself on the playmat.&lt;br&gt;&lt;br&gt;
 
-(Link: &quot;Choice A&quot;)[
+The room you&#39;re at had been completely renovated into a nursery room and you hadn&#39;t left it since---save for the times your parents occasionally bring you out.&lt;br&gt;&lt;br&gt;
+
+(if: $setting is not &quot;1960s&quot;)[Above you, a few hanging toys sway slightly.](else:)[]On your right, a brown object with colorful stripes caught your eye. It was peaking out from a nearby drawer.&lt;br&gt;&lt;br&gt;
+
+While on your left, a round shape was just out of reach, but far nearer, and more brightly colored. Beside it was a dull-looking object, you didn&#39;t know where it came from but you&#39;ve never seen it before.&lt;br&gt;&lt;br&gt;
+
+You flailed your little body restlessly, you had a strong urge to...&lt;br&gt;&lt;br&gt;
+
+(if: $setting is not &quot;1960s&quot;)[
+	(Link: &quot;...reach out for the swaying toys above you.&quot;)[
 		(go-to: &quot;BlunderMoment03&quot;)
 	]
-    
-    (Link: &quot;Choice B&quot;)[
+]
+(else:)[
+]
+&lt;br&gt;
+    (Link: &quot;...crawl to the brown object on your right.&quot;)[
 		(go-to: &quot;Achievement04&quot;)
 	]
-    
-    (Link: &quot;Choice C&quot;)[
+&lt;br&gt;
+    (Link: &quot;...roll to the round object on your left.&quot;)[
 		(go-to: &quot;Achievement04&quot;)
 	]
-    
-    (Link: &quot;Choice D&quot;)[
+&lt;br&gt;
+    (Link: &quot;...roll to the dull-looking object.&quot;)[
 		(go-to: &quot;Achievement04&quot;)
-	]</tw-passagedata><tw-passagedata pid="34" name="LearnToWalk04" tags="" position="1575,600" size="100,100">{
+	]
+}</tw-passagedata><tw-passagedata pid="34" name="LearnToWalk04" tags="" position="1575,600" size="100,100">{
 (set: $babyEvents to it - (a: (passage:)&#39;s name))
 (set: $babyEvents to it + (a: &quot;LearnToWalk05&quot;))
 (link: &quot;Character Menu&quot;)[
@@ -1973,7 +2005,7 @@ You instantly feel the sniffles reach your nose, you can&#39;t take it anymore!
 
 {
 
-&lt;!--20th CENTURY--&gt;
+&lt;!--THE 1960s--&gt;
 
 (if: $setting is &quot;1960s&quot;)[
 Your uncle was startled awake, but he immediately took notice of your cries so he got off the couch to check on you.&lt;br&gt;&lt;br&gt;
@@ -2013,44 +2045,42 @@ This old man looked way older than your father, and was really scary earlier tha
 
 Stephen continued, &quot;You know what, you ain&#39;t half bad for a kid---baby, I mean. You&#39;re pretty sweet.&quot; $cName tilted his head, $che wasn&#39;t proficient enough in the language to understand. But it didn&#39;t matter, $che recognised the friendly tone of his uncle&#39;s voice. So $cHe gave a simple response that always worked for $chim, &quot;Yah!&quot;]
 
-&lt;!--MODERNN--&gt;
+&lt;!--THE 2000s--&gt;
 
 (else-if: $setting is &quot;2000s&quot;)[
-Sunday was startled awake, and he immediately jumped off the couch in surprise. &quot;Huh? Uh, what?&quot; He winced in pain as he fell on his butt while groggily wiping the corner of his eyes. He turned his head to your direction, belatedly noticing your cries. He panicked, and rushed over.&lt;br&gt;&lt;br&gt;
+Sunday was startled awake from the noise, rolling over to the edge of the ouch until he fell on his butt. &quot;Owh...crap. The baby...&quot;  His head snapped to the source of the noise. He got up with a wince, dusting off the back of his trousers before rushing to $cPossessive side.&lt;br&gt;&lt;br&gt;
 
-&quot;Woah there, shh... What on earth happened? It&#39;s okay, it&#39;s okay. Don&#39;t cry...&quot; He lifted (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] up and cradled (if: $isMale is true)[him](else:)[her] with clumsy skill, but it only further agitated the little one. &quot;&#39;&#39;WAHHHHHH!&#39;&#39;&quot; Sunday winced at the sheer loudness, and high pitch of the scream---he really didn&#39;t know what to do. &quot;Oh, oh dear... Uh, I&#39;m so sorry (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name], what do you need? Milk? Congee?Or did something hurt you?&quot; His questions came out like bullets, and his eyes scanned every nook, and cranny of (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot; and $name is not &quot;Tobias&quot;)[$name&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is true)[Junior&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name&#39;] body. There were no visiple bumps or injuries...then what was the problem---oh!&lt;br&gt;&lt;br&gt;
+&quot;Woah there, shh... What on earth happened? It&#39;s okay, it&#39;s okay. Don&#39;t cry...&quot; He lifted $cName up from the crib to cradle $chim, only to further agitate the little one. &quot;&#39;&#39;WAHHHHHH!&#39;&#39;&quot; $cName cried $chis heart out, nearly rupturing Sunday&#39;s eardrums. &quot;Hey, hey there... It&#39;s gonna alright, you hear me?&quot; He comforted little $cName until $che calmed down. $cHe wiped the tears in $chis eyes and pointed up at the baby mobile. &quot;Boo...&quot; $cHe sniffled.&lt;br&gt;&lt;br&gt;
 
-&quot;Is it your little plushie? The one you were playing with earlier?&quot; (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] instantly perked up at the mention, and (if: $isMale is true)[he](else:)[she] softened (if: $isMale is true)[his](else:)[her] cries, only letting out small sniffles while (if: $isMale is true)[he](else:)[she] looked up at Sunday with a pleading gaze. Sunday sighed in relief, so that was the problem.&lt;br&gt;&lt;br&gt;
+Sunday looked to where the finger was pointing, belatedly noticing a cute plushie stuck above. &quot;Ah, is that why you&#39;re crying? Do you want me to get it for you?&quot; $cName stubbornly reached for the teddy as $chis answer. Sunday shifted $cPossessive weight on his arms, and assisted him on the rescue. $cPossessive eye&#39;s lit up, and $che took the plushie with a delighted squeal.&lt;br&gt;&lt;br&gt;
 
-He then turned to the crib, rummaging through (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot; and $name is not &quot;Tobias&quot;)[$name&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is true)[Junior&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name&#39;] sheets. &quot;Huh? Where did it---owh.&quot; He bumped into the baby mobile, which instantly dropped the cute plushie (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] liked so much. &quot;Oh, here it is.&quot; He took it from the bed and handed it over to the delighted baby. &quot;Bah! Yahh!&quot; (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] squealed in excitement, and hugged the plushie as tight as (if: $isMale is true)[he](else:)[she] can. (if: $isMale is true)[He](else:)[She]&#39;ll never lose the cute plushie ever again!&lt;br&gt;&lt;br&gt;
+&quot;Seems like you&#39;re the type to change moods faster than the weather could,&quot; He booped the now happy $cName on the nose before he set $chim down. &quot;I&#39;m gonna grab some coffee, then get back to you. I think it&#39;s a good time for tummy time, don&#39;t you think?&quot; $cName giggled in response, transferring $chis attention to $chis little teddy. When $che noticed Sunday leaving the room, $che put the plush down and tried to follow. But the once useful crib fence blocked $chis way. $cHe tried to pull himself up, crying out for Sunday anxiously.&lt;br&gt;&lt;br&gt;
 
-Sunday snickered at (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot; and $name is not &quot;Tobias&quot;)[$name&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is true)[Junior&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name&#39;] excitement, mere seconds ago, he was crying his heart out when it was missing. Babies are so amusing. &quot;Awh, is our little (if: $isMale is true)[mister](else:)[lady] of the house happy now?&quot; &quot;Yiiah!&quot; &quot;That&#39;s so nice to hear... well, since I&#39;m up now. Why don&#39;t we go and have tummy time together? You&#39;ve been in bed for a little too long today.&quot; &quot;Aah!&quot; &quot;I&#39;ll go and change your diapers first, I noticed you used your current one earlier...&quot;&lt;br&gt;&lt;br&gt;
+Sunday noticed the commotion, he turned his back right away. He caught $cName struggling to pull himself up, so he quickly went back to the crib. But $cName pulled himself up all on his own. &quot;Hey baby, what&#39;s wrong?&quot; $cName whimpered, freeing one hand to pull on the hem of Sunday&#39;s long sleeve. &quot;Wah! (if: (history:) contains &quot;FirstWord&quot;)[Up, up!&quot; It finally dawned on him. Sunday carefully scooped $cName back up into his arms. $cName contented snuggled $chimself up as $che tugged onto Sunday&#39;s sweater for support.](else:)[Ah, ah!&quot; Sunday&#39;s eyes flickered for a moment before it dawned on him. &quot;Oh, baby wants uppies?&quot; He scooped $cName into his arms, who contentedly held onto his sweater with a tight grip.]&lt;br&gt;&lt;br&gt;
 
-Sunday put (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] down, and rummaged through (if: $isMale is true)[his](else:)[her] drawers. (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] hugged (if: $isMale is true)[his](else:)[her] plushie for a few seconds longer as (if: $isMale is true)[he](else:)[she] watched before putting it back down. (if: $isMale is true)[He](else:)[She] crawled to a side of the fence closest to Sunday before using it to pull (if: $isMale is true)[himself](else:)[herself] to stand up.&lt;br&gt;&lt;br&gt;
+A soft smile fell onto the older man&#39;s face, &quot;I should probably hit the gym more often,&quot; he muttered to himself as he left the room with the baby in his arms.]
 
-When Sunday turned his back, (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] was already reaching out for him with excited giggles. &quot;So excited for tummy time? Well, as I said just awhile ago, we have to get you changed first.&quot; Sunday smiled, he lifted the baby up before carrying (if: $isMale is true)[him](else:)[her] over to the dressing table.]
+&lt;!--THE 2040s--&gt;
 
-&lt;!--FUTURISTIC--&gt;
-
-(else:)[
-Cory was startled by the wail, interrupting him from his virtual call with his brother. &quot;What was that, your child?&quot; Stephen&#39;s voice came through as he tried to angle his head to the side of the virtual screen. Cory chuckled and shared his vision.&lt;br&gt;&lt;br&gt;
-&quot;Yeah, but (if: $isMale is true)[he](else:)[she]&#39;s usually obedient. Not sure what&#39;s going on with (if: $isMale is true)[him](else:)[her] today. Mind if you take over for a moment?&quot;&lt;br&gt;
+(else-if: $setting is &quot;2040s&quot;)[
+Cory was startled by the wail, interrupting him from his virtual call with his brother. &quot;What was that, your child?&quot; Stephen&#39;s voice came through as he tried to angle his head to the side of the virtual screen. Cory chuckled and shared his sight via his modified light brain---a cheaper, versatile alternative to the neuralink.&lt;br&gt;&lt;br&gt;
+&quot;Yeah, but $che&#39;s usually pretty quiet. Not sure what&#39;s going on with $chim today. Mind if you take over for a moment?&quot;&lt;br&gt;
 &quot;Naturally, but don&#39;t take too long. you know I&#39;m a bit rusty here. Great data extraction program by the way,&quot;&lt;br&gt;
 &quot;It&#39;s not a big deal, really. Alright, I&#39;ll be back soon.&quot;&lt;br&gt;&lt;br&gt;
-He muted the call and headed over to check up on his baby (if: $isMale is true)[boy](else:)[girl]. &quot;What&#39;s wrong little (if: $isMale is true)[guy](else:)[lady]?&quot; He asked.&lt;br&gt;&lt;br&gt;
+He muted the call and headed over to check up on his baby $cboy. &quot;What&#39;s wrong little one?&quot; He asked.&lt;br&gt;&lt;br&gt;
 
-(if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] paused (if: $isMale is true)[his](else:)[her] little cries before pointing up at the baby mobile. &quot;Ah! Ah!&quot; (if: $isMale is true)[He](else:)[She] cried out. Cory looked up, a dawning realisation on his face. He couldn&#39;t help but tease his (if: $isMale is true)[son](else:)[daughter] a little.&lt;br&gt;&lt;br&gt;&quot;Oh no, what a pickle you&#39;re in. Little Pooh bear is stuck in the baby mobile. Whatever shall we do?&quot;&lt;br&gt;&lt;br&gt;
-(if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] sobbed, nodding along to (if: $isMale is true)[his](else:)[her] fathers (~~sarcastic~~) sad tone. &quot;Bah...Pooh, pooh! ..Wuwuwu...&quot; The little babe whimpered. Cory bent down to press a kiss on (if: $name is not &quot;Tobias&quot; and $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;s](else-if: $name is &quot;Casey&quot;)[$name O&#39;s](else:)[$name&#39;] little temple to reassure (if: $isMale is true)[him](else:)[her] that everything is alright.&lt;br&gt;&lt;br&gt;
+$cName paused $chis little cries before pointing up at the baby mobile. &quot;Ah! Ah!&quot; $cHe cried. Cory looked up, figuring out the problem at once he couldn&#39;t help but tease his little (if: $DadEke contains &quot;Crybaby&quot;)[crybaby](else:)[$cboy].&lt;br&gt;&lt;br&gt;&quot;Oh no, what a pickle you&#39;re in. Little Pooh bear is stuck in the baby mobile. Whatever shall we do?&quot;&lt;br&gt;&lt;br&gt;
+$cName sobbed, nodding along to $chis fathers (~~sarcastic~~) sad tone. &quot;Bah...Pooh, //hiccup// ..Wuwuwu...&quot; The little babe sobbed. Cory then bent down to give his $cson a hug to reassure $chim that everything is all right.&lt;br&gt;&lt;br&gt;
 
-&quot;There, there. Daddy is here to save the day,&quot; He confidently stretched his muscles while little (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] glared at him with impatience. &quot;Now, now. You don&#39;t look at your daddy like that. You gotta learn to respect me in this house, okay?&quot; Little (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] puffed (if: $isMale is true)[his](else:)[her] cheeks indignantly and pointed at the plushie again. &lt;br&gt;&lt;br&gt;
+&quot;There, there. Daddy is here to save the day,&quot; He confidently stretched his muscles which earned an impatient glare from $cName. &quot;Now, now. You don&#39;t look at your daddy like that. You gotta learn to respect me in this house, okay?&quot; Little $cName cheeks puffed indignantly before $che pointed at the plushie again. &lt;br&gt;&lt;br&gt;
 
-Cory sighed and lifted little (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] up instead. &quot;Alright, up we go! Our family&#39;s treasure is here to save the day, get ready to be rescued little pooh bear!&quot; (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] was dumbfounded. (if: $isMale is true)[He](else:)[She] waved (if: $isMale is true)[his](else:)[her] little legs up in the air, looking down with fear before (if: $isMale is true)[his](else:)[her] little face beamed as he came into contact with the super cute plushie he loved! &quot;Bahhh!&quot; (if: $isMale is true)[He](else:)[She] delightfully squealed, grabbing the arm of the plush with (if: $isMale is true)[his](else:)[her] strong infantile grip.&lt;br&gt;&lt;br&gt;
+Cory sighed helplessly. He lifted little $cName up, &quot;Alright, up we go! Our family&#39;s treasure is here to save the day and ready to rescue $chis little pooh bear!&quot; $cLondon was stunned at first. $cHe flailed $chis little legs up in the air out of fear until $che came into contact with the super cute plushie $che was trying to rescue. &quot;Bahhh!&quot; $cHe delightfully squealed, reaching out for the arm of the plush with $chis little palms once $che could. $cHis strong infantile grip allowed $chim to hold it firmly.&lt;br&gt;&lt;br&gt;
 
-Cory sent him down, little (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] hugged the cute plush dearly before reaching out to give Cory a hug, the most precious kind of affection the little baby (if: $isMale is true)[boy](else:)[girl] knew. Cory&#39;s hands gripped the fence of the crib a little tighter, &quot;Little (if: $DadEke is (array:))[rascal...](else:)[crybaby...]&quot; His heart felt like melting from cuteness overload! (if: $Csection is true)[If his wife didn&#39;t have such a difficult birth, he would definitely get a second little one on the way! Or maybe he should start earning more for the family and get the latest Little Family&#39;s baby incubator product for another child!](else:)[He&#39;s definitely gonna sweet talk his way to getting a second child.]&lt;br&gt;&lt;br&gt;
+Cory then set $cher down, little $cName hugged the cute plush dearly. Right before Cory backed away, $cName tried to get up, and surprisingly pulled himself using the bars of the crib fence. He reached out to give Cory a hug, the most precious kind of affection the little baby $cboy knew.&lt;br&gt;&lt;br&gt;
 
-But before he could reciprocate the hug, (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] already impatiently pulled (if: $isMale is true)[himself](else:)[herself] up, and rubbed (if: $isMale is true)[his](else:)[her] little head against Cory&#39;s knuckles on the crib fence.
+Cory&#39;s retreating hands came back to wrap his standing little $cboy carefully, &quot;Little (if: $DadEke contains &quot;Crybaby&quot;)[crybaby](else:)[rascal]...&quot; His heart felt as if it was melting from the cuteness overload! (if: $Csection is true)[If his wife didn&#39;t have such a difficult birth, he would definitely get a second little one on the way! Or maybe he should start earning more for the family and get the latest Little Family&#39;s baby incubator product for another child!](else:)[He&#39;s definitely gonna sweet talk his way to getting a second child.]&lt;br&gt;&lt;br&gt;
 
-&quot;Oh my sweet baby...&quot; Cory would absolutely sacrifice the world for (if: $isMale is true)[him](else:)[her] at this moment! It would be great if little (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] never grew up!
+If he had to, Cory would absolutely sacrifice the world for his precious baby $cboy for moments like these! It would be great if his baby never grew up, and stayed as small and adorable as now!
 ]
 }&lt;br&gt;
 ---
@@ -2152,108 +2182,6 @@ To Be Continued
 ---
 {
 
-&lt;!--(if: (history:) does not contain (passage:)&#39;s name)[
-(if: $choice is &quot;A&quot;)[
-(set: $choice to &quot;&quot;)
-
-&lt;!--DECADES BACK--&gt;
-
-(if: $setting is &quot;1960s&quot;)[
-	No matter how hard you try to lift you body, nothing seemed to work. Then the rhythmic snoring of your babysitter, Stephen, helped your little brain concentrate. You noticed something wonderful!&lt;br&gt;&lt;br&gt;
-    
-    You may not be able to lift your little body over, but as you moved about in the crib, you can feel it sway and push your body. Push to the left, push, push, push, and---oh dear! You slammed your little face onto the soft linen of your crib! It&#39;s a little hard to breath, and a very scary position for your small age but it&#39;s okay, your crib is still swaying, and your tiny body is still very strong!&lt;br&gt;&lt;br&gt;
-    
-    Push and---&quot;Hahh!&quot; You sigh in relief before turning your body to the other end of your crib. You turn your head and grab one of the little bars.&lt;br&gt;&lt;br&gt;
-    //==Skill Check!==//&lt;br&gt;
-    (if: $Str is &gt; 10)[//==Skill Check (color: &quot;green&quot;)[SUCCESS]!==//&lt;br&gt;&lt;br&gt;Thanks to all that strength you&#39;ve been building up, you successfully pull yourself up with ease.&lt;br&gt;&lt;br&gt;](else:)[//==Skill Check (color: &quot;red&quot;)[FAILED]!==//&lt;br&gt;&lt;br&gt;A little more huffs and puffs then you successfully grab hold of the bar and pulled yourself up with much difficulty.&lt;br&gt;&lt;br&gt;]
-    You grip it firmly, pulling yourself up as you reach the higher end of the bar. The solid wood smelled weird and felt rough on your soft, doughy palms but neither the smell nor pain phased you. The cute plushie your dad brought you is in much more fatal danger!&lt;br&gt;&lt;br&gt;
-    The plushie seemed to sense the danger it was in too. The mobile swayed, as if it was trying to push its soft cotton body off, then the teddy&#39;s arm reached for yours. You held onto the bar of the crib fence, and reached for it with difficulty. It was too high!&lt;br&gt;&lt;br&gt;
-    The open window of the nursing room suddenly let in a gush of wind at just the right angle, and hit your mobile. The little hanging toys on the mobile rattled, and then your toy bravely jumped into your arms! It&#39;s cute beady eyes looked up at you with gratitude, and your whole body shook from the giddy joy you felt!&lt;br&gt;&lt;br&gt;
-    &quot;Weee! Ehehe! Ah!&quot;&lt;br&gt;&lt;br&gt;
-    You stumble onto the soft bedding yet again, embracing the only true love of your life: Little Pooh.&lt;br&gt;&lt;br&gt;
-     Stephen got up with a start, &quot;Eh? Huh? Who&#39;s there...&quot; He turned his head left and right in a sleepy daze before his eyes landed on little (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name]. &quot;Oh, just the baby.&quot; He groaned, and got up from the couch. &quot;Alright, what do you want? What are you so noisy for?&quot; He grumbled, catching little (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot; and $name is not &quot;Tobias&quot;)[$name&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is true)[Junior&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name&#39;] delighted smile. &lt;br&gt;&lt;br&gt;
-     He mimicked the delighted smile without even realising it.&lt;br&gt;&lt;br&gt;
-     &quot;Bah! Aiyah!&quot; The babe squealed, raising the teddy with pride. Stephen chuckled, and took the presented teddy, he assumed the babe was in some kind of playful mood. &quot;You wanna play? Alright then. Lookie here, little bear&#39;s got them superpowers... wooosh! He&#39;s like a little superbear. Watch him glide... Weee!&quot; (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] giggled. (if: $isMale is true)[He](else:)[She] didn&#39;t understand, but (if: $isMale is true)[he](else:)[she] liked the tone of the older man&#39;s voice. &quot;Yaaaa!&quot;
-	]
-    
-&lt;!--THE MODERN TIMES--&gt;
-
-(if: $setting is &quot;2000s&quot;)[
-
-	&lt;!-- AUTOMATIC NAME AND PRONOUN CALCULATION --&gt;
-(set: _name to $name)
-(if: $name is &quot;Cory&quot; and $isMale is true)[
-	(set: _name to $name + &quot; Junior&quot;)
-	(set: _possessive to &quot;Junior&#39;s&quot;)
-]
-(else-if: $name is &quot;Cory&quot; or $name is &quot;Casey&quot;)[
-	(set: _name to $name + &quot; O&#39;&quot;)
-	(set: _possessive to _name + &quot;&#39;s&quot;)
-]
-(else-if: $name is &quot;Tobias&quot;)[
-	(set: _possessive to _name + &quot;&#39;&quot;)
-]
-(else:)[
-	(set: _possessive to _name + &quot;&#39;s&quot;)
-]
-
-(set: _he to (if: $isMale is true)[&quot;He&quot;](else:)[&quot;She&quot;])
-(set: _his to (if: $isMale is true)[&quot;his&quot;](else:)[&quot;her&quot;])
-
-	No matter how hard you try to lift you body, nothing seemed to work. Then the rhythmic snoring of your babysitter, Sunday, helped your little brain concentrate. You noticed something wonderful!&lt;br&gt;&lt;br&gt;
-    
-    You may not be able to lift your little body over, but as you moved about in the crib, you can feel it sway and push your body. Push to the left, push, push, push, and---oh dear! You slammed your little face onto the soft linen of your crib! It&#39;s a little hard to breath, and a very scary position for your small age but it&#39;s okay, your crib is still swaying, and your tiny body is still very strong!&lt;br&gt;&lt;br&gt;
-    
-    Push and---&quot;Hahh!&quot; You sigh in relief before turning your body to the other end of your crib. You turn your head and grab one of the little bars.&lt;br&gt;&lt;br&gt;
-    //==Skill Check!==//&lt;br&gt;
-    (if: $Str is &gt; 10)[//==Skill Check (color: &quot;green&quot;)[SUCCESS]!==//&lt;br&gt;&lt;br&gt;Thanks to all that strength you&#39;ve been building up, you successfully pull yourself up with ease.&lt;br&gt;&lt;br&gt;](else:)[//==Skill Check (color: &quot;red&quot;)[FAILURE]!==//&lt;br&gt;&lt;br&gt;A little more huffs and puffs then you successfully grab hold of the bar and pulled yourself up with much difficulty.&lt;br&gt;&lt;br&gt;]
-    
-    You grip it firmly, pulling yourself up as you reach the higher end of the bar. The smooth wood felt a little too slippery in your soft, and doughy palms. But thanks to your powerful infantile grip that often troubled your parents, you were able to hold on. The little mobile swayed as you struggle to stand, but it gave you another brilliant idea. You push the crib a few more times and then... your lovely plush bear bravely jumped off the mobile, slamming right down on your face. &quot;Ah!&quot; You yelped, and slap it down, whimpering from the pain.&lt;br&gt;&lt;br&gt;
-    
-    Wait, no! Why are you even crying? You just saved little Pooh bear&#39;s life! You forgot all the pain as you excitedly fall back down to the crib, and embrace little Pooh. &quot;Hahaha...eek!&quot; You squeal, giving little Pooh several smooches just like how your mommy, and daddy did when they&#39;re happy with each other. Little Pooh bear is absolutely blushing out of bashfulness, turning its little head away from the overwhelming affection. How sweet!&lt;br&gt;&lt;br&gt;
-    
-    Sunday gasped, waking up from a panicked daze. He heard a little yelp, and immediately turned to (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot; and $name is not &quot;Tobias&quot;)[$name&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is true)[Junior&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name&#39;] direction. He rested a palm against his rapidly beating chest. He thought he&#39;d suffer a case of sudden infant death syndrome during a nap.&lt;br&gt;&lt;br&gt;
-    
-    He would probably never sleep around an infant anymore, or develop a fear of having a child in the far future if it were truly the case. He got up from his nap on the couch to lift the delighted infant. &quot;Man, don&#39;t scare me like that again. You seem pretty happy though,&quot; He cradled (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] into his arms, attempting to calm his beating heart.&lt;br&gt;&lt;br&gt;
-    
-    &quot;Lah!&quot; (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] responded in turn, happily swaying the little Pooh in (if: $isMale is true)[his](else:)[her] grip. (if: $isMale is true)[He](else:)[She] dropped it after a short while to hug Sunday&#39;s neck. The young man seemed to be rather stressed, (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] noticed not long after being held.&lt;br&gt;&lt;br&gt;
-    
-    Just like how (if: $isMale is true)[his](else:)[her] parents were sometimes. (if: $isMale is true)[He](else:)[She] didn&#39;t know how to help, but a hug never hurts! It always works with (if: $isMale is true)[his](else:)[her] mom and dad anyway, especially (if: $isMale is true)[his](else:)[her] dad.&lt;br&gt;&lt;br&gt;
-    
-    Sunday felt surprised at the (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot; and $name is not &quot;Tobias&quot;)[$name&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is true)[Junior&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name&#39;] sudden affection. He paused for awhile, before reciprocating it with a gentle embrace. &quot;Little empath,&quot; He murmured, a small smile tugging on his face.]
-    
-    &lt;!--DA FUTURE--&gt;
-
-(if: $setting is &quot;2040s&quot;)[
-	No matter how hard you try to lift you body, nothing seemed to work. Then the deep, and calming voice of your father, Cory, helped your little brain concentrate. You noticed something wonderful!&lt;br&gt;&lt;br&gt;
-    
-    You may not be able to lift your little body over, but as you moved about in the crib, you can feel it sway and push your body. Push to the left, push, push, push, and---oh dear! You slammed your little face onto the soft linen of your crib! It&#39;s a little hard to breath, and a very scary position for your small age but it&#39;s okay, your crib is still swaying, and your tiny body is still very strong!&lt;br&gt;&lt;br&gt;
-    
-    Push and---&quot;Hahh!&quot; You sigh in relief before turning your body to the other end of your crib. You turn your head and grab one of the little bars.&lt;br&gt;&lt;br&gt;
-    //==Skill Check!==//&lt;br&gt;
-    (if: $Str is &gt; 10)[//==Skill Check (color: &quot;green&quot;)[SUCCESS]!==//&lt;br&gt;&lt;br&gt;Thanks to all that strength you&#39;ve been building up, you successfully pull yourself up with ease.&lt;br&gt;&lt;br&gt;](else:)[//==Skill Check (color: &quot;red&quot;)[FAILED]!==//&lt;br&gt;&lt;br&gt;A little more huffs and puffs then you successfully grab hold of the bar and pulled yourself up with much difficulty.&lt;br&gt;&lt;br&gt;
-    You pulled yourself up until you reach the higher end of the bar. The smooth and soft surface of the crib fence was the perfect hold for your soft and doughy little palms. Clinging tightly onto the bar, you reach for your plushie. It hung right above the neck of the crib mobile. Your little hands attempt to reach the lowest paper toys, and by miracle, you grab it! Your powerful grip shook the crib mobile, and before you knew it, your little plushie jumped off! It landed right on your shoulders, and your little body swayed uncontrollably before landing bum first back on the mattress. What a successful rescue!
-    
-    The beady eyes of your little plushie shot you a look of gratitude. How did you know? Well the sparkle in its eyes say everything! You better go and comfort the little one for surviving such a scary ordeal. &quot;Yaha!&quot; You squeal in delight.
-    
-    &quot;How are things on your end?&quot; Cory asked his brother, Stephen. &quot;Not bad... the firewall system of this whole company is impressive, but not as impressive as me. I may be rusty but that doesn&#39;t mean the years I spent working in the force was a waste.&quot; A brass voice spoke into Cory&#39;s mind directly. He smiled at the response before navigating through the network of data he just gained access to.&lt;br&gt;&lt;br&gt;&quot;They only want to know what STASIS has been cooking up. COLOR is a pretty competitive company, I&#39;m the only one they turn to when it comes to stuff like this.(if: (history:) contains &quot;Language01&quot;)[ Especially after I solved the malicious virus running through their program in their bestselling virtual reality game.]&quot;&lt;br&gt;
-    &quot;Wow, impressive. Look at my little brother, becoming a big deal and all that. I&#39;m proud of you, you know.&quot; Stephen whistled. &quot;Hmm... they detected us. Have you found what you wanted? We better boot out and erase any traces leading to us.&quot;&lt;br&gt;
-    &quot;Mhm. I&#39;ve got what we needed. Let&#39;s head out. Thanks for covering for me, Stephen.&quot;&lt;br&gt;
-    &quot;Always. I&#39;m just glad you don&#39;t forget to ask for help when you need it. Unlike a certain someone...&quot;&lt;br&gt;&lt;br&gt;
-    Cory finished retrieving all the files before erasing his traces and leaving the virtual space. He directly attacked and stunned the unknown networks trying to get a lead on him. &quot;Fabian is stubborn, I know. But you shouldn&#39;t hold it against him, big brother. He&#39;ll be more hardheaded that way.&quot; He coaxed Stephen before smoothly moving onto another topic.&lt;br&gt;&lt;br&gt;
-    &quot;By the way, me and Casey plan on hosting a baby party some time when we&#39;re both ready. I was wondering if you&#39;d like to come over and help us out sometime.&quot; Stephen drifted from his bitter thoughts, &quot;Seriously? You don&#39;t need to ask me twice, Cory! I&#39;d love to help out. Just text me the deets!&quot;&lt;br&gt;&lt;br&gt;
-    &quot;The //deets?// that is so old-fashioned. Nobody uses that anymore. Probably only our parents.&quot;&lt;br&gt;
-    &quot;What can I say? I find the 2000s pretty neat. If only I were born earlier,&quot; Stephen sighed with longing.&lt;br&gt;
-    &quot;At least you were born in the 2000s. That counts, right?&quot;&lt;br&gt;&lt;br&gt;
-    The two brothers playfully bantered before ending the virtual call with a farewell.
-    ]
-	]
-&lt;br&gt;
----
-(color: &quot;yellow&quot;)[&lt;br&gt;Congratulations! With a strong body, and clever mind, you were able to successfully retrieve your cute plushie back securely! Without disturbing your (if: $setting is &quot;2040s&quot;)[father&#39;s conversation with the door!](else:)[babysitter&#39;s sleep---at least at first.]&lt;br&gt;&lt;br&gt;Truly a model exemplery of a good child! You are definitely going to regale your cute plushie with the details of your rescue plans later, and watch their beady eyes widen at your sheer awesomeness.]
-]
-] --&gt;
-
 (if: $choice is &quot;A&quot; or $pageResolved is true)[
 	(set: $choice to &quot;&quot;)
 	(set: $pageResolved to true)
@@ -2264,8 +2192,16 @@ To Be Continued
 	You may not be able to lift your little body over, but as you moved about in the crib, you can feel it sway and push your body. Push to the left, push, push, push, and---oh dear! You slammed your little face onto the soft linen of your crib! It&#39;s a little hard to breath, and a very scary position for your small age but it&#39;s okay, your crib is still swaying, and your tiny body is still very strong!&lt;br&gt;&lt;br&gt;
     
 	Push and---&quot;Hahh!&quot; You sigh in relief before turning your body to the other end of your crib. You turn your head and grab one of the little bars.&lt;br&gt;&lt;br&gt;
+    
 	//==Skill Check!==//&lt;br&gt;
-	(if: $Str is &gt; 10)[//==Skill Check (color: &quot;green&quot;)[SUCCESS]!==//&lt;br&gt;&lt;br&gt;Thanks to all that strength you&#39;ve been building up, you successfully pull yourself up with ease.&lt;br&gt;&lt;br&gt;](else:)[//==Skill Check (color: &quot;red&quot;)[FAILURE]!==//&lt;br&gt;&lt;br&gt;A little more huffs and puffs then you successfully grab hold of the bar and pulled yourself up with much difficulty.&lt;br&gt;&lt;br&gt;]
+	(if: $Str is &gt; 10)[
+    //==Skill Check (color: &quot;green&quot;)[SUCCESS]!==//
+    &lt;br&gt;&lt;br&gt;Thanks to all that strength you&#39;ve been building up, you successfully pull yourself up with ease.&lt;br&gt;&lt;br&gt;
+    ]
+    (else:)[
+    //==Skill Check (color: &quot;red&quot;)[FAILURE]!==//&lt;br&gt;&lt;br&gt;
+    A little more huffs and puffs then you successfully grab hold of the bar and pulled yourself up with much difficulty.&lt;br&gt;&lt;br&gt;
+    ]
 
 &lt;!--TIMELINE BRANCHES--&gt;
 
@@ -2321,39 +2257,89 @@ To Be Continued
 
 	(else-if: $setting is &quot;2040s&quot;)[
 
-		You pulled yourself up until you reach the higher end of the bar. The smooth and soft surface of the crib fence was the perfect hold for your soft and doughy little palms. Clinging tightly onto the bar, you reach for your plushie. It hung right above the neck of the crib mobile. Your little hands attempt to reach the lowest paper toys, and by miracle, you grab it! Your powerful grip shook the crib mobile, and before you knew it, your little plushie jumped off! It landed right on your shoulders, and your little body swayed uncontrollably before landing bum first back on the mattress. What a successful rescue!&lt;br&gt;&lt;br&gt;
+		You pulled yourself up until you reach the higher end of the bar. The smooth and soft surface of the crib fence was the perfect hold for your soft and doughy little palms. Clinging tightly onto the bar, you reach for your plushie. It hung right above the neck of the crib mobile. Your little hands attempt to reach the lowest hanging toy, and by miracle, you grab it! Your powerful grip shook the crib mobile, and before you knew it, your little plushie jumped off! It landed right on your shoulders, and your little body swayed uncontrollably before landing bum first back on the mattress. What a successful rescue!&lt;br&gt;&lt;br&gt;
     
     	The beady eyes of your little plushie shot you a look of gratitude. How did you know? Well the sparkle in its eyes say everything! You better go and comfort the little one for surviving such a scary ordeal. &quot;Yaha!&quot; You squeal in delight.&lt;br&gt;&lt;br&gt;
     
-    	&quot;How are things on your end?&quot; Cory asked his brother, Stephen. &quot;Not bad... the firewall system of this whole company is impressive, but not as impressive as me. I may be rusty but that doesn&#39;t mean the years I spent working in the force was a waste.&quot; A brass voice spoke into Cory&#39;s mind directly. He smiled at the response before navigating through the network of data he just gained access to.&lt;br&gt;&lt;br&gt;
+    	&quot;How are things on your end?&quot; Cory asked his brother, Stephen. &quot;Not bad... the firewall system of this whole company is impressive, but not as impressive as me, of course. I may be rusty but that doesn&#39;t mean the years I spent working in the force was a waste.&quot; A proud sounding voice spoke into Cory&#39;s mind directly. He smiled at the response before navigating through the network of data he just gained access to.&lt;br&gt;&lt;br&gt;
         
-        &quot;They only want to know what STASIS has been cooking up. COLOR is a pretty competitive company, I&#39;m the only one they turn to when it comes to stuff like this.(if: (history:) contains &quot;Language01&quot;)[ Especially after I solved the malicious virus running through their program in their bestselling virtual reality game.]&quot;&lt;br&gt;
+        &quot;COLOR only wants to know what STASIS has been cooking up. They&#39;re a pretty competitive company, I&#39;m the only one they could turn to when it comes to stuff like this.(if: (history:) contains &quot;Language01&quot;)[ Especially after I solved the malicious virus running through their program in their bestselling virtual reality game.](else:)[]&quot;&lt;br&gt;
     	&quot;Wow, impressive. Look at my little brother, turning into a big deal and all that. I&#39;m proud of you, you know.&quot; Stephen whistled playfully. &quot;Oh shit, they detected us. Have you found what you wanted? We better boot out and erase any traces leading to us.&quot;&lt;br&gt;
     	&quot;Mhm. I&#39;ve got what we needed. Let&#39;s head out. Thanks for covering for me, Stephen.&quot;&lt;br&gt;
     	&quot;Always. I&#39;m just glad you don&#39;t forget to ask for help when you need it. Unlike a certain someone...&quot;&lt;br&gt;&lt;br&gt;
         
-    	Cory finished retrieving all the files before erasing his traces and leaving the virtual space. He directly attacked and stunned the unknown networks trying to get a lead on him. &quot;Fabian is stubborn, I know. But you shouldn&#39;t hold it against him, big brother. He&#39;ll be more hardheaded that way.&quot; He coaxed Stephen before smoothly moving onto another topic.&lt;br&gt;&lt;br&gt;
+    	Cory finished retrieving all the files before erasing his traces and leaving the virtual space. He stealthily attacked using his modified system, Red, stunning the unknown streams of consciousness and networks trying to get a lead on him. &quot;Fabian is stubborn, I know. But you shouldn&#39;t hold it against him, big brother. You can&#39;t untangle a hedgehog trapped in a can that refuses to flatten its quills.&quot; He advised before smoothly moving onto another topic.&lt;br&gt;&lt;br&gt;
         
-    	&quot;By the way, me and Casey plan on hosting a baby party some time when we&#39;re both ready. I was wondering if you&#39;d like to come over and help us out sometime.&quot; Stephen drifted from his bitter thoughts, &quot;Seriously? You don&#39;t need to ask me twice, Cory! I&#39;d love to help out. Just text me the deets!&quot;&lt;br&gt;&lt;br&gt;
+    	&quot;By the way, me and Casey plan on hosting a baby party in two weeks or so. I was wondering if you&#39;d like to come over and help us out sometime.&quot; Stephen drifted from his bitter thoughts, &quot;Seriously? You don&#39;t need to ask me twice, Cory! I&#39;d love to help out. Just text me the deets!&quot;&lt;br&gt;&lt;br&gt;
         
-    	&quot;The //deets?// that is so old-fashioned. Nobody uses that anymore. Probably only our parents.&quot;&lt;br&gt;
+    	&quot;The //deets?// that is so old-fashioned. Nobody uses that anymore. Maybe our parents.&quot;&lt;br&gt;
     	&quot;What can I say? I find the 2000s pretty neat. If only I were born earlier,&quot; Stephen sighed with longing.&lt;br&gt;
     	&quot;At least you were born in the 2000s. That counts, right?&quot;&lt;br&gt;&lt;br&gt;
         
-    	The two brothers playfully bantered before ending the virtual call with a farewell.
+    	The two brothers playfully bantered before ending the virtual meet with a farewell.
 	]
 &lt;br&gt;
 ---
-(color: &quot;yellow&quot;)[&lt;br&gt;Congratulations! With a strong body, and clever mind, you were able to successfully retrieve your cute plushie back securely! And you did it without disturbing your (if: $setting is &quot;2040s&quot;)[father&#39;s conversation with the door.](else:)[babysitter&#39;s sleep---at least at first.]&lt;br&gt;&lt;br&gt;Truly a model exemplery of a good child! You are definitely going to regale your cute plushie with the details of your rescue plans later, and watch their beady eyes widen at your sheer awesomeness.]
+(color: &quot;yellow&quot;)[&lt;br&gt;Congratulations! With a strong body, and clever mind, you were able to successfully retrieve your cute plushie back securely! And you did it without disturbing your (if: $setting is &quot;2040s&quot;)[father&#39;s conversation with the door.](else:)[babysitter&#39;s rest---at least at first.]&lt;br&gt;&lt;br&gt;Truly a model exemplery of a good child! You are definitely going to regale your cute plushie with the details of your rescue plans later, and watch their beady eyes widen at your sheer awesomeness.]
 ]
 
-(if: (history:) does not contain (passage:)&#39;s name)[
-	(if: $choice is &quot;C&quot;)[
+	(if: $choice is &quot;C&quot; or $pageResolved is true)[
 	(set: $choice to &quot;&quot;)
-	LearnToWalk02&lt;br&gt;
-	?Result03
-	]
+    (set: $pageResolved to true)
+    
+    You look up at your cute plushie stuck above, and you couldn&#39;t help the fear and worry creep up your little heart. You anxiously try to reach for it, but it was too high up. Wait... then it struck you---you could just bring yourself up! But how? You turned your head restlessly before attempting to roll your body. As you land on your side, you propped one arm below you to push yourself off the bed of your crib.&lt;br&gt;&lt;br&gt;
+    
+    //==Skill Check!==//&lt;br&gt;
+    (if: $Str is &gt; 10)[
+    //==Skill Check (color: &quot;green&quot;)[SUCCESS]!==//&lt;br&gt;&lt;br&gt;
+    In one smooth motion, you push yourself off the crib mattress, bend your knees, and stand up! Good work, little one!&lt;br&gt;&lt;br&gt;
+    ]
+    (else:)[
+    //==SKill Check (color: &quot;red&quot;)[FAILURE]!==//&lt;br&gt;&lt;br&gt;
+    It took all your strength to push yourself off the crib mattress. You felt oddly euphoric after you manage to stand. Good work, little one!&lt;br&gt;&lt;br&gt;
+    ]
+    Your legs wobbled precariously, you knew you couldn&#39;t last for long in this position. With the new height advantage, you try to reach for your little plushie. Your fingers only managed to brush against the hanging toys. Your weight suddenly shifted, causing you to sumble back down the crib. But you manage to pull a toy off roughly, shaking the crib mobile until both the hanging toy and your little plush fall down simultaneously. &quot;Yaaaah!&quot;&lt;br&gt;&lt;br&gt;
+    
+    &lt;!--THE 1960s--&gt;
+    (if: $setting is &quot;1960s&quot;)[
+    Stephen snorted in his sleep, and adjusted his position on the couch. The cap slid off his face, falling onto the soft carpet beside him, revealing a rugged looking face with long hair and a gruff beard. The noise barely disturbed Stephen from the comfort of his slumber that the goddess of dreams had brought him.&lt;br&gt;&lt;br&gt;
+    
+    A strong gush of wind entered through the open windows, brushing past the shaky crib mobile with a missing toy. It brought over the sound of chirping birds, and the fresh smell of morning dew grass. On the crib, a $skin-skinned baby held two plushies with a face full of joy, $chis little giggles drifted to the outside world. It brought a sense of joy and peace to every passersby that overheard it.
+    ]
+    (else-if: $setting is &quot;2000s&quot;)[
+    Sunday murmured something incoherent in his sleep before adjusting his position in his sleep. He hugged the patterned cushions, and curled up inwards against the sturdy backrest of the couch. His beige sweater rode up from the back, revealing a glimpse of the fair skin underneath. The noise was a minor inconvenience that didn&#39;t wake him from his much needed rest.&lt;br&gt;&lt;br&gt;
+    
+    The only noise in the room was from the joyful squeals and giggles of the baby that entertained itself at the cirb. $cName felt perfectly fine playing on $chis own, and $chis two friends: The cute plushie, and the new ball plushie.&lt;br&gt;&lt;br&gt;
+    You better give them better names once you grow older.
+    ]
+    (else-if: $setting &quot;2040s&quot;)[
+    Cory&#39;s eyes looked back into the nursery thanks to the noise. He immediately noticed the missing moon ball that was supposed to be hanging off the crib mobile on the palm of his $cson&#39;s hand instead. &quot;Hm? What&#39;re you looking at? Don&#39;t forget we&#39;re still in the middle of hijacking STASIS&#39; data base.&quot; A deep, brass voice snapped him back into focus, &quot;Nothing, just my $cson. I think $che just pulled off one of the toys from the crib mobile I got him.&quot; He smiled helplessly.&lt;br&gt;&lt;br&gt;
+    
+    &quot;Damn. You didn&#39;t tell me your child was a wild one.&quot;
+    &quot;$cHe isn&#39;t, usually. But $che seems alright. Anyway, how are things on your end, big brother? I just gained access to their virtual network.&quot; Cory said as he navigated through a network of data.
+    &quot;Pretty good actually, I bypassed every firewall and took control over their administration. They won&#39;t be able to react for two, maybe three minutes if you slip up.&quot;
+    &quot;Two minutes is more than enough for me.&quot; His stream of consciousness wandered through the seemingly endless data before he began the extraction.
+    
+    &quot;COLOR only wants to know what STASIS has been cooking up. They&#39;re a pretty competitive company, I&#39;m the only one they could turn to when it comes to stuff like this.(if: (history:) contains &quot;Language01&quot;)[ Especially after I solved the malicious virus running through their program in their bestselling virtual reality game.](else:)[]&quot;&lt;br&gt;
+    &quot;Wow, impressive. Look at my little brother, turning into a big deal and all that. I&#39;m proud of you, you know.&quot; Stephen whistled playfully. &quot;Have you got what you needed? I was cracking their systems when I accidentally alerted them.&quot;&lt;br&gt;
+    	&quot;Mhm. I&#39;ve got what we needed. Let&#39;s head out. Thanks for covering for me, Stephen.&quot;&lt;br&gt;
+    	&quot;Always. I&#39;m just glad you don&#39;t forget to ask for help when you need it. Unlike...well, you know.&quot;&lt;br&gt;&lt;br&gt;
+        
+        Cory finished retrieving all the files before erasing his traces and leaving the virtual space. He stealthily attacked using his modified system, Red, stunning the unknown streams of consciousness and networks trying to get a lead on him. &quot;Fabian is stubborn man, I&#39;m aware. But you shouldn&#39;t hold it against him, big brother. The harder you push a stubborn mule, the fiercer the backlash.&quot; He gently advised before smoothly moving onto another topic.&lt;br&gt;&lt;br&gt;
+        
+    	&quot;By the way, me and Casey plan on hosting a baby party some time in two weeks. I was wondering if you&#39;d like to come over and help us out if you&#39;re free.&quot; Stephen drifted from his bitter thoughts, &quot;Seriously? You don&#39;t need to ask me twice, Cory! I&#39;d love to help out. I&#39;m free anytime. Just text me the deets!&quot;&lt;br&gt;&lt;br&gt;
+        
+    	&quot;The //deets?// that is so old-fashioned. Nobody uses that anymore.&quot;&lt;br&gt;
+    	&quot;What can I say? I find the 2000s pretty neat. If only I were born earlier,&quot; Stephen sighed with longing.&lt;br&gt;
+    	&quot;Wellt you were born in the 2000s. That counts, right?&quot;&lt;br&gt;&lt;br&gt;
+        
+    	The two brothers playfully bantered before ending the virtual meet with a farewell.
+    ]
+&lt;br&gt;
+---
+(color:&quot;yellow&quot;)[Congratulations! Thanks to your strong body and raw efforts, you were able to successfully secure your cute plushie back into your arms! Additionally, you got yourself a new plushie! And you did it all without disturbing your (if: $setting is &quot;2040s&quot;)[father&#39;s conversation with the door.](else:)[babysitter&#39;s rest.]&lt;br&gt;&lt;br&gt;Truly a model exemplery of a good child! You should definitely try to regale your little plushies with the details of your rescue plans, so you can watch their beady eyes widen at your sheer awesomeness.]
 ]
+
 (if: (history:) does not contain (passage:)&#39;s name)[
 	(if: $choice is &quot;D&quot;)[
 	(set: $choice to &quot;&quot;)
@@ -2466,7 +2452,7 @@ To Be Continued
     ](else:)[
         (goto: &quot;Language02&quot;)
     ]
-]</tw-passagedata><tw-passagedata pid="47" name="Language01" tags="" position="1350,425" size="100,100">{
+]</tw-passagedata><tw-passagedata pid="47" name="Language01" tags="" position="1125,425" size="100,100">{
 (set: $babyEvents to it - (a: (passage:)&#39;s name))
 (link: &quot;Character Menu&quot;)[
 		(set: $returnTo to (passage:)&#39;s name)
@@ -2701,7 +2687,7 @@ Oh, what to do...
     ---
     
     
-    </tw-passagedata><tw-passagedata pid="48" name="Language02" tags="" position="1350,525" size="100,100">{
+    </tw-passagedata><tw-passagedata pid="48" name="Language02" tags="" position="1225,425" size="100,100">{
 (set: $babyEvents to it - (a: (passage:)&#39;s name))
 (link: &quot;Character Menu&quot;)[
 		(set: $returnTo to (passage:)&#39;s name)
@@ -2716,7 +2702,7 @@ Oh, what to do...
 ---
 The moon shone dimly in the dark of the night. The night breeze brushed past the curtains, (if: $setting is &quot;2040s&quot;)[breezing through a man until he shivered](else:)[and dimmed the fire inside for a brief moment before it flickered back to life].
 
-&quot;It&#39;s getting real cold out lately, huh?&quot; Cory mumbled to himself as he looked out the open window. He (if: $setting is &quot;1960s&quot;)[put down his newspaper,](else-if: $setting is &quot;2000s&quot;)[tucked his phone into his pocket,](else:)[paused the video playing on his light brain---the more affordable neuralink---with a thought,] (if: $setting is &quot;2040s&quot;)[then with a wave of his hand... the windows closed](else:)[and got up to shut the windows].
+&quot;It&#39;s getting real cold out lately, huh?&quot; Cory mumbled to himself as he looked out the open window. He (if: $setting is &quot;1960s&quot;)[put down his newspaper,](else-if: $setting is &quot;2000s&quot;)[tucked his phone into his pocket,](else:)[paused the video playing on his light brain with a thought,] (if: $setting is &quot;2040s&quot;)[then with a wave of his hand... the windows closed](else:)[and got up to shut the windows].
 
 He (if: $setting is &quot;1960s&quot;)[looked up at the calendar hanging by the wall of their nose, and noted the date.](else-if: $setting is &quot;2000s&quot;)[checked his phone for the date.](else:)[checked his light brain for the date.] &quot;It&#39;s almost winter, we should start preparing for the Winter Fair.&quot;
 
@@ -2772,7 +2758,7 @@ Cory heaved a heavy sigh. Before he answered her plea, he pulled out (if: $setti
         (set: $Courage to it+1)
 		(go-to: &quot;StoryComprehension&quot;)
 	] A story between two lions who fall in love, highly recommended for children to learn about perfectly healthy romance! (color: &quot;grey&quot;)[(Note-slip : A better future for the queer starts with the young. --- Elise)]
-    </tw-passagedata><tw-passagedata pid="49" name="FirstWord" tags="" position="1450,425" size="100,100">{
+    </tw-passagedata><tw-passagedata pid="49" name="FirstWord" tags="" position="1350,425" size="100,100">{
 (set: $FirstWord to true)
 (link: &quot;Character Menu&quot;)[
 		(set: $returnTo to (passage:)&#39;s name)
@@ -2875,7 +2861,7 @@ But he&#39;ll never fail to not bring this up his wife, if ever the opportunity 
     ](else:)[
         (goto: &quot;Language02&quot;)
     ]
-]</tw-passagedata><tw-passagedata pid="50" name="StoryComprehension" tags="" position="1450,525" size="100,100">{
+]</tw-passagedata><tw-passagedata pid="50" name="StoryComprehension" tags="" position="1450,425" size="100,100">{
 (link: &quot;Character Menu&quot;)[
 		(set: $returnTo to (passage:)&#39;s name)
 		(goto: &quot;CharacterMenu&quot;)
@@ -2898,11 +2884,11 @@ But he&#39;ll never fail to not bring this up his wife, if ever the opportunity 
 
 &quot;Ah, You have an appreciation for the classics too, eh? The twins, the prince, and his fiancée. Good taste. Money well spent.&quot;&lt;br&gt;&lt;br&gt;
 
-Cory went upstairs, propping (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] up his arms before he went for the nursery room. He walked over the babyproof gate his wife had mounted several weeks ago, before putting his baby down the crib. He tucked (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] in, before giving (if: $isMale is true)[him](else:)[her] a forehead kiss. He then plopped down on the stool by the crib and put on his glasses before he began to read the story to his (if: $isMale is true)[son](else:)[daughter]. In truth, he had the original book in the study, it was his favourite classic after all. However, when he saw the kids version of the book while shopping, he couldn&#39;t resist buying it. It was almost as pricey as the original. But all he wanted was for his kid to love the story too.&lt;br&gt;&lt;br&gt;
+Cory went upstairs, propping $cName up his arms before he went for the nursery room. He walked over the babyproof gate his wife had mounted several weeks ago, before putting his baby down the crib. He tucked $cName in, before giving $chim a forehead kiss. He then plopped down on the stool by the crib and put on his glasses before he began to read the story to his $cson. In truth, he had the original book in the study, it was his favourite classic after all. However, when he saw the kids version of the book while shopping, he couldn&#39;t resist buying it. It was almost as pricey as the original. But all he wanted was for his kid to love the story too.&lt;br&gt;&lt;br&gt;
 
 &quot;There was a time, long ago...&quot;&lt;br&gt;&lt;br&gt;
 
-(if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[ Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] perked (if: $isMale is true)[his](else:)[her] little ears up, excited. (if: $isMale is true)[His](else:)[Her] father had a voice that was really good for storytelling, so (if: $isMale is true)[he](else:)[she] got immersed immediately.&lt;br&gt;&lt;br&gt;
+$cName perked $chis little ears up, excited. $cHis father had a voice that was really good for storytelling, so $che got immersed immediately.&lt;br&gt;&lt;br&gt;
 
 &quot;There were two noble sisters, and they were one of the most renowned maidens of all: The Cherry Twins. They were named after the fruit because of their beautiful flowing red hair, and how they always come in pairs.&quot;&lt;br&gt;
 &quot;Though they were twins, they never liked the same things. Whatever the other despised, the other adored. They were also very different as people.&quot;&lt;br&gt;
@@ -2917,18 +2903,18 @@ Cory went upstairs, propping (if: $name is not &quot;Cory&quot; and $name is not
 &quot;...the younger sister schemed to...&quot; &quot;...drown...&quot;&lt;br&gt;
 &quot;...she replaced the eldest...fooled the prince...&quot;&lt;br&gt;&lt;br&gt;
 
-Little (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[ Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] already began to doze off. Two beautiful sisters appeared in (if: $isMale is true)[his](else:)[her] dreams, one looked a little older, and the other a little younger. Yet they both resembled each other to a remarkable degree.&lt;br&gt;
-They were a lovely pair, the most beautiful women (if: $isMale is true)[he](else:)[she] had ever seen---second to (if: $isMale is true)[his](else:)[her] mother. They were always happy together, and always prioritised one another. But then their eyes turned to another, to a handsome prince that stole their hearts, and broke their sisterhood...&lt;br&gt;
-(if: $isMale is true)[His](else:)[Her] little mouth quirked into a frown, brows furrowed in (if: $isMale is true)[his](else:)[her] sleep. If (if: $isMale is true)[he](else:)[she] had a twin sister, (if: $isMale is true)[he](else:)[she]&#39;ll never fight her over for some man they don&#39;t know...&lt;br&gt;&lt;br&gt;
+Little $cName already began to doze off. Two beautiful sisters appeared in $chis dreams, one looked a little older, and the other a little younger. Yet they both resembled each other to a remarkable degree.&lt;br&gt;
+They were a lovely pair, the most beautiful women $che had ever seen---second to $chis mother. They were always happy together, and always prioritised one another. But then their eyes turned to another, to a handsome prince that stole their hearts, and broke their sisterhood...&lt;br&gt;
+$cHis little mouth quirked into a frown, brows furrowed in $chis sleep. If $che had a twin sister, $che&#39;ll never fight her over for some man they don&#39;t know...&lt;br&gt;&lt;br&gt;
 
 &quot;The pwince is bad, dada... so bad...&quot;&lt;br&gt;
-Cory put a finger between (if: $name is not &quot;Tobias&quot; and $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;s](else-if: $name is &quot;Casey&quot;)[$name O&#39;s](else:)[$name&#39;] furrowed brows to relax them. &quot;Why do you think so, baby?&quot;&lt;br&gt;&lt;br&gt;
+Cory put a finger between $cPossessive furrowed brows to relax them. &quot;Why do you think so, baby?&quot;&lt;br&gt;&lt;br&gt;
 
 &quot;Mmm... he huwt the sisters...&quot;&lt;br&gt;
 &quot;What if I told you that no one in this story is any good?&quot;&lt;br&gt;
 &quot;That&#39;s impossible, dada... only the pwetty twins are good...only...&quot;&lt;br&gt;&lt;br&gt;
 
-(if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[ Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] no longer responded to Cory&#39;s questions, falling into deep slumber. Cory smiled, and turned off all the lights except (if: $name is not &quot;Tobias&quot; and $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is true)[$name Junior&#39;s](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;s](else-if: $name is &quot;Casey&quot;)[$name O&#39;s](else:)[$name&#39;] night light. It was a little lamp with pretty stars and crescent moons dotting its lampshade. (if: $name is not &quot;Cory&quot; and $name is not &quot;Casey&quot;)[$name](else-if: $name is &quot;Cory&quot; and $isMale is true)[Junior](else-if: $name is &quot;Cory&quot; and $isMale is false)[$name O&#39;](else-if: $name is &quot;Casey&quot;)[$name O&#39;](else:)[$name] could never sleep without it.
+$cName no longer responded to Cory&#39;s questions, falling into deep slumber. Cory smiled, and turned off all the lights except $cPossessive night light. It was a little lamp with pretty stars and crescent moons dotting its lampshade. $cName could never sleep without it.
 ]
 
 
@@ -3133,15 +3119,13 @@ To Be Continued
 (if: $Beauty &lt; 0)[(set: $Beauty to 0)]
 
 
-}</tw-passagedata><tw-passagedata pid="52" name="TermsAndConditions" tags="" position="75,325" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="52" name="TermsAndConditions" tags="" position="75,275" size="100,100">{
 (set: $agreed to false)
 
 ---
 Please read before you play.
 ---
 ###Greed&#39;s Interactive Novel Terms of Use &amp; Ownership Agreement
----
-
 &#39;&#39;Effective Date:&#39;&#39; 5/15/2026&lt;br&gt;&lt;br&gt;
 
 &#39;&#39;1. Ownership of Content&#39;&#39;&lt;br&gt;&lt;br&gt;
@@ -3198,14 +3182,70 @@ kartkid123.5@gmail.com/kartkid404
 
 (link: &quot;Proceed &gt;&gt;&gt;&quot;)[
     (if: $agreed)[
-        (go-to: &quot;Life_&quot;)
+        (go-to: &quot;DISCLAIMER&quot;)
     ]
     (else:)[
         (alert: &quot;Please check the agreement box to continue.&quot;)
         (go-to: &quot;TermsAndConditions&quot;)
     ]
 ]
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="53" name="RandomEvent01" tags="" position="1025,550" size="100,100">{
+(set: $babyEvents to it - (a: (passage:)&#39;s name))
+&lt;!--(set: $babyEvents to it + (a: &quot;RandomEvent02&quot;))--&gt;
+(link: &quot;Character Menu&quot;)[
+		(set: $returnTo to (passage:)&#39;s name)
+		(goto: &quot;CharacterMenu&quot;)
+	]
+|
+(link: &quot;Check Inventory&quot;)[
+		(set: $returnTo to (passage:)&#39;s name)
+		(goto: &quot;Inventory&quot;)
+	]
+}
+---
+RE01
+To Be Continued
+
+(Link: &quot;Next &gt;&gt;&gt;&quot;)[
+		(go-to: &quot;RE01choices&quot;)
+	]</tw-passagedata><tw-passagedata pid="54" name="RE01choices" tags="" position="1025,650" size="100,100">{
+(link: &quot;Character Menu&quot;)[
+		(set: $returnTo to (passage:)&#39;s name)
+		(goto: &quot;CharacterMenu&quot;)
+	]
+|
+(link: &quot;Check Inventory&quot;)[
+		(set: $returnTo to (passage:)&#39;s name)
+		(goto: &quot;Inventory&quot;)
+	]
+}
+---
+RE01outcome
+To Be Continued
+
+(link: &quot;Next &gt;&gt;&gt;&quot;)[
+    (if: $babyEvents&#39;s length &gt; 0)[
+    	(set: $babyhood to true)
+        (set: _nextPassage to (either: ...$babyEvents))
+        (goto: _nextPassage)
+    ](else:)[
+        (goto: &quot;Language02&quot;)
+    ]
+]</tw-passagedata><tw-passagedata pid="55" name="DISCLAIMER" tags="" position="75,400" size="100,100">{
+###DISCLAIMER
+---
+This is a work of fiction. Names, characters, businesses, places, events, and incidents are either the products of the author&#39;s imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental.&lt;br&gt;&lt;br&gt;
+
+The information, scenarios, and choices presented in this game are for entertainment purposes only. The game does not provide professional, medical, financial, or legal advice. Decisions made in the game should not be applied to real-life situations. The developers are not responsible for any actions taken by players based on gameplay.&lt;br&gt;&lt;br&gt;
+
+&lt;!--Disclaimer: This game contains simulated violence, mature themes, and depictions of  &amp;lsqb;insert mature theme, e.g., crime/death&amp;rsqb;. Player discretion is advised. Not suitable for young children.&lt;br&gt;&lt;br&gt;--&gt;
+
+This game is currently in active development. You may encounter bugs, glitches, or performance issues. &lt;!--Save files and progress may be reset or corrupted during updates. --&gt;We appreciate your feedback in improving the game.
+}
+
+(link: &quot;Next &gt;&gt;&gt;&quot;)[
+        (go-to: &quot;Life_&quot;)
+]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
